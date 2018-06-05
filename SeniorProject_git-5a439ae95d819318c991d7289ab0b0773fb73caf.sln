@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeniorProject_git-5a439ae95d819318c991d7289ab0b0773fb73caf", "SeniorProject_git-5a439ae95d819318c991d7289ab0b0773fb73caf.csproj", "{EC2B9253-F286-0D7C-538B-FCCA32F640B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC2B9253-F286-0D7C-538B-FCCA32F640B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC2B9253-F286-0D7C-538B-FCCA32F640B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC2B9253-F286-0D7C-538B-FCCA32F640B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC2B9253-F286-0D7C-538B-FCCA32F640B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
