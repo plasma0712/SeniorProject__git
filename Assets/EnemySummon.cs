@@ -7,7 +7,7 @@ public class EnemySummon : MonoBehaviour
     public GameObject My;
     public Transform Enemey;
 
-    int iSecond = 5; // 나중에 난이도에 따라 조절 할 예정
+    int iSecond = 3; // 나중에 난이도에 따라 조절 할 예정
 
     private void Start()
     {
@@ -17,7 +17,11 @@ public class EnemySummon : MonoBehaviour
 
     IEnumerator EnemeySummon()
     {
-        Instantiate(Enemey, My.transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(iSecond);
+        while (true)
+        {
+            Instantiate(Enemey, My.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(iSecond);
+            Debug.Log("흐음");
+        }
     }
 }

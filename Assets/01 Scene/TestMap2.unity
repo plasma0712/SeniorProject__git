@@ -575,15 +575,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuyMonsterSummon:
-  - {fileID: 1648399323845524, guid: 3983f3709e84cd742865f64f9bec6e2b, type: 2}
-  - {fileID: 1190794005228202, guid: 0b18deb7e8ec89c4b97d2f559b62e135, type: 2}
-  - {fileID: 1190794005228202, guid: 0b18deb7e8ec89c4b97d2f559b62e135, type: 2}
-  - {fileID: 1190794005228202, guid: 0b18deb7e8ec89c4b97d2f559b62e135, type: 2}
-  - {fileID: 1190794005228202, guid: 0b18deb7e8ec89c4b97d2f559b62e135, type: 2}
-  - {fileID: 1190794005228202, guid: 0b18deb7e8ec89c4b97d2f559b62e135, type: 2}
-  - {fileID: 1190794005228202, guid: 0b18deb7e8ec89c4b97d2f559b62e135, type: 2}
+  - {fileID: 1149390742646606, guid: b4ddb080114b21746bf9b4d44706c89c, type: 2}
+  - {fileID: 1569349585941304, guid: d136cdb3bbe1ee84f8971f81147339e6, type: 2}
+  - {fileID: 1569349585941304, guid: d136cdb3bbe1ee84f8971f81147339e6, type: 2}
+  - {fileID: 1569349585941304, guid: d136cdb3bbe1ee84f8971f81147339e6, type: 2}
+  - {fileID: 1569349585941304, guid: d136cdb3bbe1ee84f8971f81147339e6, type: 2}
+  - {fileID: 1569349585941304, guid: d136cdb3bbe1ee84f8971f81147339e6, type: 2}
+  - {fileID: 1569349585941304, guid: d136cdb3bbe1ee84f8971f81147339e6, type: 2}
   iCount: 0
   iNumber: 0
+  iGold: 0
+  iSoul: 0
   bBuy: 0
   vPoint: {x: 0, y: 0, z: 0}
   TileIn: 0
