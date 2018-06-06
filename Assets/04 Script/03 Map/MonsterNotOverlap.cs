@@ -12,7 +12,7 @@ public class MonsterNotOverlap : Singleton<MonsterNotOverlap>
     }
     private void OnMouseEnter()
     {
-        Debug.Log("마우스가 들어왔어염 뿌우~");
+        //Debug.Log("마우스가 들어왔어염 뿌우~");
         DoingSummon = false;
     }
     private void OnMouseExit()

@@ -21,7 +21,6 @@ public class EnemySummon : MonoBehaviour
         {
             Instantiate(Enemey, My.transform.position, Quaternion.identity);
             yield return new WaitForSeconds(iSecond);
-            Debug.Log("흐음");
         }
     }
 }

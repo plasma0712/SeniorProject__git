@@ -94,5 +94,37 @@ public class LobbyTopUIData : Singleton<LobbyTopUIData>                // 어디
         XMLLobbyTopUI.Instance.CreateXml();                             // XML에 다시 저장    
         LobbyTopUIXMLLoad.Instance.CurrentLobbyTopUIText();             // XML저장 한 값을 TOP_UI창에 다시 불러줌
     }
-    
+
+
+    public void MonsterSummonUseGold(int _ivalue)                                    // 금 사용할때 불러오는 함수
+    {
+        if (iGoldOrigin < _ivalue)                                      // 금 보유량 보다 높을땐 return
+        {
+            MonsterSummon.Instance.FundGoldUse = false;
+            return;
+        }
+        else
+        {
+            MonsterSummon.Instance.FundGoldUse = true;
+            iGoldOrigin -= _ivalue;
+            XMLLobbyTopUI.Instance.CreateXml();                         // XML에 다시 저장    
+            LobbyTopUIXMLLoad.Instance.CurrentLobbyTopUIText();         // XML저장 한 값을 TOP_UI창에 다시 불러줌
+        }
+    }
+
+    public void MonsterSummonUseSoul(int _ivalue)                                    // 영혼 사용할때 불러오는 함수
+    {
+        if (iSoulOrigin < _ivalue)                                      // 영혼 보유량 보다 높을땐 return
+        {
+            MonsterSummon.Instance.FundSoulUse = false;
+            return;
+        }
+        else
+        {
+            MonsterSummon.Instance.FundSoulUse = true;
+            iSoulOrigin -= _ivalue;
+            XMLLobbyTopUI.Instance.CreateXml();                         // XML에 다시 저장    
+            LobbyTopUIXMLLoad.Instance.CurrentLobbyTopUIText();         // XML저장 한 값을 TOP_UI창에 다시 불러줌
+        }
+    }
 }

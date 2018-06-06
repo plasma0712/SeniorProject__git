@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 212717804645385086}
   - component: {fileID: 61550843195723606}
   - component: {fileID: 114601111102985944}
+  - component: {fileID: 114830873388668068}
   m_Layer: 0
   m_Name: Monster_2
   m_TagString: Untagged
@@ -124,6 +125,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoingSummon: 1
+--- !u!114 &114830873388668068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569349585941304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dba4a3e1a59b824591e9def767c9911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1421815738427202, guid: 2f38352e1f6e2ba46b78062e302cbd44, type: 2}
+  firePos: {fileID: 4773674490941804}
+  time: 0
+  tag_time: 0
+  delay_bullet: 0
+  Shooting: 0
 --- !u!212 &212717804645385086
 SpriteRenderer:
   m_ObjectHideFlags: 1

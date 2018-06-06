@@ -10,7 +10,7 @@ public class MonsterSummon : Singleton<MonsterSummon>
     public int iNumber;
     public int iGold;
     public int iSoul;
-        
+
     GameObject followingSummonMonster;
     GameObject Dummy;
     public bool bBuy = false;
@@ -26,37 +26,43 @@ public class MonsterSummon : Singleton<MonsterSummon>
 
     bool PossibleSummon = false; // 소환이 가능한지 않한지 확인하기 위한 bool TileNumbering이 1인경우에만 가능하게 할것
 
-    [HideInInspector]
+    public bool FundGoldUse = true; // Gold 없을 때 Soul 소모 안하게 하기 위함
+    public bool FundSoulUse = true; // Soul 없을 때 Gold 소모 안하게 하기 위함
+
+    bool DoubleSummon = false; // 소환중에 소환이 안되게 하기 위함
+
     public int iTileNumbering;
 
     void Update()   // 코루틴으로 변경예정 
     {
-        if (bBuy == true)
+        if (DoubleSummon == true)
         {
-            Vector3 NewPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z + 5));
-            //Debug.Log("마우스 좌표 X : " + NewPosition.x + " 마우스 좌표 Y : " + NewPosition.y);
-            //followingSummonMonster = Instantiate(BuyMonsterSummon[iNumber], NewPosition, Quaternion.identity);
-            MouseClick(vPoint.x, vPoint.y);
             if (bBuy == true)
             {
-                if (TileIn == false)
+                Vector3 NewPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z + 5));
+                //Debug.Log("마우스 좌표 X : " + NewPosition.x + " 마우스 좌표 Y : " + NewPosition.y);
+                //followingSummonMonster = Instantiate(BuyMonsterSummon[iNumber], NewPosition, Quaternion.identity);
+                MouseClick(vPoint.x, vPoint.y);
+                if (bBuy == true)
                 {
-                    followingSummonMonster.transform.position = NewPosition;
-
+                    if (TileIn == false)
+                    {
+                        followingSummonMonster.transform.position = NewPosition;
+                    }
+                    else
+                    {
+                        followingSummonMonster.transform.position = vPoint;
+                    }
                 }
                 else
                 {
-                    followingSummonMonster.transform.position = vPoint;
+                    return;
                 }
             }
             else
             {
                 return;
             }
-        }
-        else
-        {
-            return;
         }
 
         /*
@@ -95,20 +101,38 @@ public class MonsterSummon : Singleton<MonsterSummon>
     }
     */
 
-    public void Summon(int _iNumber,int _iGold, int _iSoul)
+    public void Summon(int _iNumber, int _iGold, int _iSoul)
     {
-        // 자원소모하고 나서 진행이 되야하기 때문에 여기서 할 예정
-        iNumber = _iNumber;
-        iGold = _iGold;
-        iSoul = _iSoul;
+        if (DoubleSummon == false) // 소환중 이중으로 안되게 하기 위함
+        {
+            // 자원소모하고 나서 진행이 되야하기 때문에 여기서 할 예정
+            iNumber = _iNumber;
+            iGold = _iGold;
+            iSoul = _iSoul;
 
-        LobbyTopUIData.Instance.UseGold(iGold);
-        LobbyTopUIData.Instance.UseSoul(iSoul);
+            LobbyTopUIData.Instance.MonsterSummonUseGold(iGold);
+            LobbyTopUIData.Instance.MonsterSummonUseSoul(iSoul);
 
-        bBuy = true;
-        Debug.Log(iNumber);
-        followingSummonMonster = Instantiate(BuyMonsterSummon[iNumber], new Vector3(0, 0, 0), Quaternion.identity);
-        followingSummonMonster.GetComponent<BoxCollider2D>().enabled = false;
+            if (FundGoldUse == false)
+            {
+                LobbyTopUIData.Instance.GetSoul(iSoul);
+            }
+            if (FundSoulUse == false)
+            {
+                LobbyTopUIData.Instance.GetGold(iGold);
+            }
+
+            if (FundGoldUse == true && FundSoulUse == true)
+            {
+                bBuy = true;
+                Debug.Log(iNumber);
+                followingSummonMonster = Instantiate(BuyMonsterSummon[iNumber], new Vector3(0, 0, 0), Quaternion.identity);
+                followingSummonMonster.GetComponent<BoxCollider2D>().enabled = false;
+                DoubleSummon = true;
+                Debug.Log("DoubleSummon : " + DoubleSummon);
+
+            }
+        }
     }
 
     public void BSummon()
@@ -117,13 +141,13 @@ public class MonsterSummon : Singleton<MonsterSummon>
         LobbyTopUIData.Instance.GetSoul(iSoul);
     }
 
-    public void SummonCurring(int _iNumber,float _vPosX, float _vPosY)
+    public void SummonCurring(int _iNumber, float _vPosX, float _vPosY)
     {
         iNumber = _iNumber;
         Instantiate(BuyMonsterSummon[iNumber], new Vector3(_vPosX, _vPosY, 0), Quaternion.identity);
     }
 
-    public void MouseClick(float fPosX,float fPosY)
+    public void MouseClick(float fPosX, float fPosY)
     {
         if (bBuy == true)
         {
@@ -135,11 +159,13 @@ public class MonsterSummon : Singleton<MonsterSummon>
                     followingSummonMonster = Dummy;
                     //XMLMonsterSummon.Instance.AddXmlNode(MonsterDataSave.Instance.fNumber.ToString(), (followingSummonMonster.transform.position.x).ToString(), (followingSummonMonster.transform.position.y).ToString());
                     //XMLMonsterSummon.Instance.AddXmlNode("1","1","1");
-                    XMLMonsterSummon.Instance.AddXmlNode(XMLMonsterSummon.Instance.MonsterSummonLegth().ToString(),iNumber.ToString(),fPosX.ToString() , fPosY.ToString());
+                    XMLMonsterSummon.Instance.AddXmlNode(XMLMonsterSummon.Instance.MonsterSummonLegth().ToString(), iNumber.ToString(), fPosX.ToString(), fPosY.ToString());
                     bBuy = false;
                     TileIn = false;
 
-                    Debug.Log("가나다라마바사아자차카타파하");
+                    DoubleSummon = false;
+                    Debug.Log("DoubleSummon : " + DoubleSummon);
+                    iTileNumbering = 0;
                 }
                 else
                 {
@@ -150,7 +176,11 @@ public class MonsterSummon : Singleton<MonsterSummon>
             {
                 Destroy(followingSummonMonster);
                 bBuy = false;
+                DoubleSummon = false;
+                Debug.Log("DoubleSummon : " + DoubleSummon);
+
                 BSummon();
+                iTileNumbering = 0;
                 //자원소모 된것에 대해서 다시 되돌리기
             }
         }

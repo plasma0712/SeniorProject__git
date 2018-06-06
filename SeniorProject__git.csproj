@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -333,12 +331,12 @@
     <Compile Include="Assets\04 Script\08 CoreDataBase\Singleton.cs" />
     <Compile Include="Assets\04 Script\09 CommonScript\SceneChange.cs" />
     <Compile Include="Assets\BulletController.cs" />
-    <Compile Include="Assets\BulletSummon.cs" />
     <Compile Include="Assets\EnemyAI.cs" />
     <Compile Include="Assets\EnemyHpUI.cs" />
     <Compile Include="Assets\EnemyMove.cs" />
     <Compile Include="Assets\EnemySummon.cs" />
     <Compile Include="Assets\MapTilePostionTool.cs" />
+    <Compile Include="Assets\MonsterAttack.cs" />
     <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\RotationBox.cs" />
     <Compile Include="Assets\RotationBoxSummon.cs" />
@@ -350,9 +348,7 @@
     <None Include="Assets\Resources\LobbyTopUIList.xml" />
     <None Include="Assets\Resources\MapList.xml" />
     <None Include="Assets\Resources\MenualList_InherentNumber.xml" />
-    <None Include="Assets\Resources\MonsterList.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Resources\MonsterList.xml" />
     <None Include="Assets\Resources\MonsterSummonList.xml" />
     <None Include="Assets\Resources\TendencyList.xml" />
   </ItemGroup>

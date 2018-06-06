@@ -238,7 +238,7 @@ Prefab:
     - target: {fileID: 114938789726653610, guid: fb3e904c2a4156e4a85641adbdf9e842,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224355540390329916, guid: fb3e904c2a4156e4a85641adbdf9e842,
         type: 2}
@@ -1172,6 +1172,7 @@ MonoBehaviour:
   bBuy: 0
   vPoint: {x: 0, y: 0, z: 0}
   TileIn: 0
+  FundUse: 0
   iTileNumbering: 0
 --- !u!1 &1266784136
 GameObject:

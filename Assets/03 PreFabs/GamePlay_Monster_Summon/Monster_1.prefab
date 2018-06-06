@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212047716968805856}
   - component: {fileID: 61940895825583626}
   - component: {fileID: 114903408299930302}
+  - component: {fileID: 114588736617814620}
   m_Layer: 0
   m_Name: Monster_1
   m_TagString: Untagged
@@ -112,6 +113,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1906888, y: 1.15}
   m_EdgeRadius: 0
+--- !u!114 &114588736617814620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149390742646606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dba4a3e1a59b824591e9def767c9911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1421815738427202, guid: 2f38352e1f6e2ba46b78062e302cbd44, type: 2}
+  firePos: {fileID: 4214899305408266}
+  time: 0
+  tag_time: 0
+  delay_bullet: 0
+  Shooting: 0
 --- !u!114 &114903408299930302
 MonoBehaviour:
   m_ObjectHideFlags: 1
