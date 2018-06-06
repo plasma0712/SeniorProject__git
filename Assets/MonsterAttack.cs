@@ -49,6 +49,7 @@ public class MonsterAttack : MonoBehaviour
             tag_time = 1;
 
             Debug.Log("충돌처리 완료");
+            Fire();
         }
 
     }

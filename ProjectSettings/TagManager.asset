@@ -6,6 +6,10 @@ TagManager:
   tags:
   - MapTile
   - Monster&Enemy
+  - LeftRotation
+  - Enemy
+  - Exit
+  - RightRotation
   layers:
   - Default
   - TransparentFX
@@ -48,4 +52,7 @@ TagManager:
     locked: 0
   - name: Monster&Enemy
     uniqueID: 559029445
+    locked: 0
+  - name: Bullet
+    uniqueID: 2815237443
     locked: 0
