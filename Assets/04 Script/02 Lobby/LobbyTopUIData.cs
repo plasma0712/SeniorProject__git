@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class LobbyTopUIData : Singleton<LobbyTopUIData>                // 어디서든 참조 가능하게 싱글톤으로 설정
 {
     public int iGold;                                                  // XML로 데이터 가져옴
-    public int iGoldOrigin;                                                               
+    public int iGoldOrigin;
     public int iSoul;                                                  // XML로 데이터 가져옴
-    public int iSoulOrigin;                                                               
+    public int iSoulOrigin;
     public int iHeart;                                                 // XML로 데이터 가져옴
     public int iHeartOrigin;
 
@@ -44,7 +44,7 @@ public class LobbyTopUIData : Singleton<LobbyTopUIData>                // 어디
             XMLLobbyTopUI.Instance.CreateXml();                         // XML에 다시 저장    
             LobbyTopUIXMLLoad.Instance.CurrentLobbyTopUIText();         // XML저장 한 값을 TOP_UI창에 다시 불러줌
         }
-    }                                                              
+    }
 
     public void UseSoul(int _ivalue)                                    // 영혼 사용할때 불러오는 함수
     {
@@ -94,4 +94,5 @@ public class LobbyTopUIData : Singleton<LobbyTopUIData>                // 어디
         XMLLobbyTopUI.Instance.CreateXml();                             // XML에 다시 저장    
         LobbyTopUIXMLLoad.Instance.CurrentLobbyTopUIText();             // XML저장 한 값을 TOP_UI창에 다시 불러줌
     }
+    
 }

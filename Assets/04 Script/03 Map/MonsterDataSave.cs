@@ -34,6 +34,8 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
     public XMLMonsterData cMonsterData;
 
     public float fNumber;
+    public float fGold;
+    public float fSoul;
 
 
     public void Init(XMLMonsterData _cMonsterData)
@@ -48,11 +50,14 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
         tMonsterHp.text = cMonsterData.fHp.ToString();
         tMonsterAttack.text = cMonsterData.fAttack.ToString();
         tMonsterDefence.text = cMonsterData.fDefence.ToString();
-        fNumber = cMonsterData.fNumber;   
+
+        fNumber = cMonsterData.fNumber;
+        fGold = cMonsterData.fGold;
+        fSoul = cMonsterData.fSoul;
     }
 
     public void SummonButtonClick()
     {
-        MonsterSummon.Instance.Summon((int)fNumber);
+        MonsterSummon.Instance.Summon((int)fNumber,(int)fGold,(int)fSoul);
     }
 }

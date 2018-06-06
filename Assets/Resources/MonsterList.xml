@@ -1,9 +1,9 @@
 <MonsterList>
-  <Monster fNumber="0" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="0" />
-  <Monster fNumber="1" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="0" />
-  <Monster fNumber="2" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="0" />
-  <Monster fNumber="3" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="0" />
-  <Monster fNumber="4" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="0" />
-  <Monster fNumber="5" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="0" />
-  <Monster fNumber="6" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="0" />
+  <Monster fNumber="0" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="100" fSoul="100" />
+  <Monster fNumber="1" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="200" fSoul="200" />
+  <Monster fNumber="2" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="300" fSoul="300" />
+  <Monster fNumber="3" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="400" fSoul="400" />
+  <Monster fNumber="4" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="500" fSoul="500" />
+  <Monster fNumber="5" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="600" fSoul="600" />
+  <Monster fNumber="6" sName="몬스터이름" sDescription="몬스터 설명" fHp="100" fLevel="1" fAttack="10" fAttackSpeed="1" eAttackType="1" fCritical="1" fDefence="1" eDefenceType="0" fGold="700" fSoul="700" />
 </MonsterList>

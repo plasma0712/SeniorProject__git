@@ -8,7 +8,9 @@ public class MonsterSummon : Singleton<MonsterSummon>
 
     public int iCount;
     public int iNumber;
-
+    public int iGold;
+    public int iSoul;
+        
     GameObject followingSummonMonster;
     GameObject Dummy;
     public bool bBuy = false;
@@ -81,6 +83,7 @@ public class MonsterSummon : Singleton<MonsterSummon>
 
     }
 
+    /*
     public void Summon(int _iNumber)
     {
         // 자원소모하고 나서 진행이 되야하기 때문에 여기서 할 예정
@@ -89,6 +92,29 @@ public class MonsterSummon : Singleton<MonsterSummon>
         Debug.Log(iNumber);
         followingSummonMonster = Instantiate(BuyMonsterSummon[iNumber], new Vector3(0, 0, 0), Quaternion.identity);
         followingSummonMonster.GetComponent<BoxCollider2D>().enabled = false;
+    }
+    */
+
+    public void Summon(int _iNumber,int _iGold, int _iSoul)
+    {
+        // 자원소모하고 나서 진행이 되야하기 때문에 여기서 할 예정
+        iNumber = _iNumber;
+        iGold = _iGold;
+        iSoul = _iSoul;
+
+        LobbyTopUIData.Instance.UseGold(iGold);
+        LobbyTopUIData.Instance.UseSoul(iSoul);
+
+        bBuy = true;
+        Debug.Log(iNumber);
+        followingSummonMonster = Instantiate(BuyMonsterSummon[iNumber], new Vector3(0, 0, 0), Quaternion.identity);
+        followingSummonMonster.GetComponent<BoxCollider2D>().enabled = false;
+    }
+
+    public void BSummon()
+    {
+        LobbyTopUIData.Instance.GetGold(iGold);
+        LobbyTopUIData.Instance.GetSoul(iSoul);
     }
 
     public void SummonCurring(int _iNumber,float _vPosX, float _vPosY)
@@ -124,14 +150,11 @@ public class MonsterSummon : Singleton<MonsterSummon>
             {
                 Destroy(followingSummonMonster);
                 bBuy = false;
+                BSummon();
                 //자원소모 된것에 대해서 다시 되돌리기
             }
         }
     }
-
-
-    //////////////////////////////////////////////////////////////////
-    //public void
 
     public bool SummonMonsters()
     {
