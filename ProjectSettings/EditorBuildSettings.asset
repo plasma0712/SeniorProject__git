@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01 Scene/TestMap.unity
     guid: f572c701d92cc314a8134c5535e68e65
+  - enabled: 1
+    path: Assets/01 Scene/TestMap2.unity
+    guid: 61dd9804669230f488091b06565536ec
