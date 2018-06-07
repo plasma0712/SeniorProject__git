@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - Exit
   - RightRotation
+  - Tower
+  - Range
   layers:
   - Default
   - TransparentFX

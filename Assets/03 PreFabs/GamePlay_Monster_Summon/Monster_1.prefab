@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114903408299930302}
   m_Layer: 0
   m_Name: Monster_1
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114584121836736096}
   m_Layer: 0
   m_Name: Range
-  m_TagString: Untagged
+  m_TagString: Range
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dba4a3e1a59b824591e9def767c9911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1421815738427202, guid: 2f38352e1f6e2ba46b78062e302cbd44, type: 2}
+  bullet: {fileID: 1953969276773152, guid: 2f38352e1f6e2ba46b78062e302cbd44, type: 2}
   firePos: {fileID: 4214899305408266}
   time: 0
   tag_time: 0

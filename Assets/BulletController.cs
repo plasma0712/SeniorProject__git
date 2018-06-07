@@ -8,13 +8,13 @@ public class BulletController : MonoBehaviour
     Animator animator;
 
     //    public GameObject player;
-
-    public MonsterAttack player;
-
-
     bool bullet_Destory;
 
-    public EnemyMove EM;
+    public GameObject BulletCore;
+
+    public MonsterAttack EM;
+
+    public EnemyMove player;
 
     public int damage;
 
@@ -22,31 +22,29 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         //   Destroy(this.gameObject, 2f);    // delete itself
-        player = GameObject.FindWithTag("Enemy").GetComponent<MonsterAttack>();
         bullet_Destory = false;
-        animator = gameObject.GetComponentInChildren<Animator>();
-        EM = GameObject.FindWithTag("Enemy").GetComponent<EnemyMove>();
+        animator = BulletCore.gameObject.GetComponentInChildren<Animator>();
+        player = GameObject.FindWithTag("Enemy").GetComponent<EnemyMove>();
+        EM = GameObject.FindWithTag("Range").GetComponent<MonsterAttack>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (EM.CurHp <= 0)
-            return;
 
         if (bullet_Destory == false)
         {
-
             Vector2 relativePos = player.transform.position - transform.position;
             float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
             transform.localRotation = Quaternion.Euler(0, 0, angle - 90);
             transform.Translate(transform.up * speed * Time.deltaTime, Space.World);
-
         }
 
         if (bullet_Destory == true)
         {
             animator.SetBool("_Hitting", true);
+            Debug.Log("총알애니메이션");
         }
     }
 
@@ -55,11 +53,21 @@ public class BulletController : MonoBehaviour
         if (other.transform.tag == "Enemy")
         {
             Debug.Log("총알충돌");
-            EM.MinusHp(damage);
+            player.MinusHp(damage);
             bullet_Destory = true;
             Destroy(this.gameObject, 1.0f);
-
         }
-
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Enemy")
+        {
+            Debug.Log("총알충돌");
+            player.MinusHp(damage);
+            bullet_Destory = true;
+            Destroy(this.gameObject, 1.0f);
+        }
+    }
+
 }
