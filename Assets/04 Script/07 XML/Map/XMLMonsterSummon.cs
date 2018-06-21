@@ -36,9 +36,10 @@ public class XMLMonsterSummon : Singleton<XMLMonsterSummon>
         {
             XMLMonsterSummonData MonsterSummon = new XMLMonsterSummonData
             {
-                InherentNumber = System.Convert.ToInt32(MonsterSummonElement.GetAttribute("InherentNumber")),
+                iCount = System.Convert.ToInt32(MonsterSummonElement.GetAttribute("iCount")),
                 fPosX = System.Convert.ToSingle(MonsterSummonElement.GetAttribute("fPosX")),
                 fPosY = System.Convert.ToSingle(MonsterSummonElement.GetAttribute("fPosY")),
+                InherentNumber = System.Convert.ToInt32(MonsterSummonElement.GetAttribute("InherentNumber")),
             };
             MonsterSummons.Add(MonsterSummon);
         }
@@ -54,8 +55,9 @@ public class XMLMonsterSummon : Singleton<XMLMonsterSummon>
         XmlNode node = Document.DocumentElement;
         XmlElement childNode = Document.CreateElement("MonsterSummon");
 
-        childNode.SetAttribute("iCount", iCount);
-        childNode.SetAttribute("InherentNumber", InherentNumber);
+        childNode.SetAttribute("InherentNumber", InherentNumber); // 짜증나네
+        childNode.SetAttribute("iCount", iCount); // 문제될수도있음
+        Debug.Log("인헐트넘버 뭐냐 시발아" + InherentNumber);
         childNode.SetAttribute("fPosX", fPosX);
         childNode.SetAttribute("fPosY", fPosY);
 

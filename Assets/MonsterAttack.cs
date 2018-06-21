@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterAttack : MonoBehaviour
+public class MonsterAttack : Singleton<MonsterAttack>
 {
     public GameObject bullet;
     public Transform firePos;
 
     public float time = 0;
-    public float tag_time = 0;
+    public bool tag_time = false;
 
     public float delay_bullet = 0;
 
@@ -22,7 +22,11 @@ public class MonsterAttack : MonoBehaviour
 
     void Fire()
     {
-        CreateBullet();
+        if (tag_time == false)
+        {
+            CreateBullet();
+            tag_time = true;
+        }
     }
 
 
@@ -36,9 +40,6 @@ public class MonsterAttack : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            tag_time = 1;
-
-            Debug.Log("충돌처리 완료");
         }
     }
 
@@ -46,9 +47,6 @@ public class MonsterAttack : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            tag_time = 1;
-
-            Debug.Log("충돌처리 완료");
             Fire();
         }
 

@@ -7,7 +7,7 @@ public class EnemySummon : MonoBehaviour
     public GameObject My;
     public Transform Enemey;
 
-    int iSecond = 3; // 나중에 난이도에 따라 조절 할 예정
+    public int iSecond = 1; // 나중에 난이도에 따라 조절 할 예정
 
     private void Start()
     {

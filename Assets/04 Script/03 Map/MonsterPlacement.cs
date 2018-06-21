@@ -5,6 +5,8 @@ using UnityEngine;
 public class MonsterPlacement : Singleton<MonsterPlacement>
 {
     [HideInInspector]
+    public int iCountData;
+    [HideInInspector]
     public int InherentNumberData;
     [HideInInspector]
     public float MonsterPosXData;
@@ -17,6 +19,8 @@ public class MonsterPlacement : Singleton<MonsterPlacement>
     public Vector3 vPos;
 
     GameObject Monster;
+
+    public string _iCount;
     //public MonsterSummon[] MonsterSummons = new MonsterSummon[10];
 
     private void Awake()
@@ -24,18 +28,24 @@ public class MonsterPlacement : Singleton<MonsterPlacement>
         CullingMonster();
     }
 
+    public void Update() // 이거 꼭 고쳐야함
+    {
+    }
+
     public void CurrentMonsterData(int _monsterdata)
     {
         Current = XMLMonsterSummon.Instance.GetMonsterSummonData(_monsterdata);
-        
+
         InherentNumberData = Current.InherentNumber;
         MonsterPosXData = Current.fPosX;
         MonsterPosYData = Current.fPosY;
+        iCountData = Current.iCount;
+
         vPos.x = MonsterPosXData;
         vPos.y = MonsterPosYData;
 
-        //GameObject instance = (GameObject)Instantiate(MonsterSummon.Instance.BuyMonsterSummon[InherentNumberData], vPos, Quaternion.identity);
-        MonsterSummon.Instance.SummonCurring(InherentNumberData,vPos.x,vPos.y);
+        MonsterSummon.Instance.SummonCurring(iCountData, vPos.x, vPos.y);
+
     }
 
     void CullingMonster()
@@ -47,4 +57,5 @@ public class MonsterPlacement : Singleton<MonsterPlacement>
             Debug.Log(k);
         }
     }
+
 }

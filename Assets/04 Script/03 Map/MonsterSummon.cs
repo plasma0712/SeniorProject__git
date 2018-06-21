@@ -33,6 +33,9 @@ public class MonsterSummon : Singleton<MonsterSummon>
 
     public int iTileNumbering;
 
+    public bool DoingSummon = true; // 여기서 설정해주는게 맞음 Overlap에서는 이걸 변경
+
+
     void Update()   // 코루틴으로 변경예정 
     {
         if (DoubleSummon == true)
@@ -153,13 +156,16 @@ public class MonsterSummon : Singleton<MonsterSummon>
         {
             if (Input.GetMouseButtonDown(0))        // 소환 시키기
             {
-                if (iTileNumbering == 1 && MonsterNotOverlap.Instance.DoingSummon == true)
+                if (iTileNumbering == 1 && DoingSummon == true)
                 {
                     followingSummonMonster.GetComponent<BoxCollider2D>().enabled = true;
                     followingSummonMonster = Dummy;
                     //XMLMonsterSummon.Instance.AddXmlNode(MonsterDataSave.Instance.fNumber.ToString(), (followingSummonMonster.transform.position.x).ToString(), (followingSummonMonster.transform.position.y).ToString());
                     //XMLMonsterSummon.Instance.AddXmlNode("1","1","1");
-                    XMLMonsterSummon.Instance.AddXmlNode(XMLMonsterSummon.Instance.MonsterSummonLegth().ToString(), iNumber.ToString(), fPosX.ToString(), fPosY.ToString());
+                    //MonsterPlacement.Instance._iCount = XMLMonster.Instance.MonsterLegth().ToString();
+                    XMLMonsterSummon.Instance.LoadXml();
+                    XMLMonsterSummon.Instance.AddXmlNode(iNumber.ToString(), XMLMonsterSummon.Instance.MonsterSummonLegth().ToString(), fPosX.ToString(), fPosY.ToString());
+                    Debug.Log("개시발"+XMLMonsterSummon.Instance.MonsterSummonLegth());
                     bBuy = false;
                     TileIn = false;
 

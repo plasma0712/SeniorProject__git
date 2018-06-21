@@ -15,6 +15,7 @@ public class EnemyMove : MonoBehaviour
 
         if(CurHp<=0)
         {
+
             Destroy(this.gameObject);
         }
 	}
@@ -40,6 +41,7 @@ public class EnemyMove : MonoBehaviour
         {
             //Debug.Log("끝남");
             Destroy(this.gameObject);
+            BulletController.Instance.TargetFinalDestory = true;
         }
         else
         {

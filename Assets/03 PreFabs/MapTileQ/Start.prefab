@@ -109,3 +109,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   My: {fileID: 1427127162464216}
   Enemey: {fileID: 4325902114171852, guid: 3790e7c729961204293ee2d000c0f536, type: 2}
+  iSecond: 1
