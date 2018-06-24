@@ -10,8 +10,8 @@ public class BulletController : Singleton<BulletController>
     //    public GameObject player;
     bool bullet_Destory;
     public GameObject BulletCore;
-    public MonsterAttack EM;
-    public EnemyMove player;
+    public MonsterAttack MonsterAttack_Range;
+    public EnemyMove Enemy;
     public int damage;
     public bool TargetLife;
 
@@ -23,8 +23,8 @@ public class BulletController : Singleton<BulletController>
         bullet_Destory = false;
         TargetLife = false;
         animator = BulletCore.gameObject.GetComponentInChildren<Animator>();
-        player = GameObject.FindWithTag("Enemy").GetComponent<EnemyMove>();
-        EM = GameObject.FindWithTag("Range").GetComponent<MonsterAttack>();
+        Enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyMove>();
+        MonsterAttack_Range = GameObject.FindWithTag("Range").GetComponent<MonsterAttack>();
     }
 
     // Update is called once per frame
@@ -32,14 +32,14 @@ public class BulletController : Singleton<BulletController>
     {
         if(TargetFinalDestory == true)
         {
-            player.CurHp = 0;
+            Enemy.CurHp = 0;
         }
 
         if (bullet_Destory == false)
         {
-            if (player.CurHp > 0)
+            if (Enemy.CurHp > 0)
             {
-                Vector2 relativePos = player.transform.position - transform.position;
+                Vector2 relativePos = Enemy.transform.position - transform.position;
                 float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
                 transform.localRotation = Quaternion.Euler(0, 0, angle - 90);
                 transform.Translate(transform.up * speed * Time.deltaTime, Space.World);
@@ -59,28 +59,19 @@ public class BulletController : Singleton<BulletController>
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Enemy")
+        if (other.transform.tag == "Enemy" )
         {
-            //Debug.Log("총알충돌");
-            player.MinusHp(damage);
+            //  Debug.Log("총알충돌");
+            Enemy.MinusHp(damage);
             bullet_Destory = true;
             Destroy(this.gameObject, 1.0f);
+            MonsterAttack_Range.GetComponent<MonsterAttack>().tag_time = false;
             MonsterAttack.Instance.tag_time = false;
         }
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.tag == "Enemy")
-        {
-            //  Debug.Log("총알충돌");
-            player.MinusHp(damage);
-            bullet_Destory = true;
-            Destroy(this.gameObject, 1.0f);
-            MonsterAttack.Instance.tag_time = false;
-        }
-    }
+
 
 }

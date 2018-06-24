@@ -7,26 +7,17 @@ public class MonsterAttack : Singleton<MonsterAttack>
     public GameObject bullet;
     public Transform firePos;
 
-    public float time = 0;
+    public float time = 2;
     public bool tag_time = false;
 
-    public float delay_bullet = 0;
+    //public float delay_bullet = 0;
 
 
-    public bool Shooting;
     // Use this for initialization
-    void Start()
-    {
-        Shooting = false;
-    }
 
     void Fire()
     {
-        if (tag_time == false)
-        {
-            CreateBullet();
-            tag_time = true;
-        }
+        StartCoroutine("DelayBullet");
     }
 
 
@@ -35,20 +26,19 @@ public class MonsterAttack : Singleton<MonsterAttack>
         Instantiate(bullet, firePos.position, firePos.rotation);
     }
 
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-        }
-    }
-
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Enemy")
         {
             Fire();
         }
-
     }
+
+    IEnumerator DelayBullet()
+    {
+        CreateBullet();
+        //Debug.Log("코루틴으로 총알생성");
+        yield return new WaitForSeconds(3.0f);
+    }
+
 }

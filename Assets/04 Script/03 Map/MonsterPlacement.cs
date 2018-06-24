@@ -54,7 +54,7 @@ public class MonsterPlacement : Singleton<MonsterPlacement>
         for(int k =0; k< XMLMonsterSummon.Instance.MonsterSummonLegth(); k ++)
         {
             CurrentMonsterData(k);
-            Debug.Log(k);
+            //Debug.Log(k);
         }
     }
 

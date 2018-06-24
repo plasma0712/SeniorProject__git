@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4292018784565522}
   - component: {fileID: 212130480166650900}
   - component: {fileID: 95042778888556364}
-  - component: {fileID: 114231315569085318}
   m_Layer: 0
   m_Name: BulletCore
   m_TagString: Untagged
@@ -101,27 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177893f4dffebed479f2ad2618f7487d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   BulletCore: {fileID: 1660975047140612}
-  EM: {fileID: 0}
-  player: {fileID: 0}
-  damage: 5
---- !u!114 &114231315569085318
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660975047140612}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 177893f4dffebed479f2ad2618f7487d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  BulletCore: {fileID: 0}
-  EM: {fileID: 0}
-  player: {fileID: 0}
-  damage: 5
+  MonsterAttack_Range: {fileID: 0}
+  Enemy: {fileID: 0}
+  damage: 3
+  TargetLife: 0
+  TargetFinalDestory: 0
 --- !u!135 &135353370853269348
 SphereCollider:
   m_ObjectHideFlags: 1
