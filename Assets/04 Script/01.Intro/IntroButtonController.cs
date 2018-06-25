@@ -31,7 +31,7 @@ public class IntroButtonController : MonoBehaviour
     {
         if (num == 1)
         {
-            SceneChange.Instance.LobbyMapSceneChange();
+            SceneChange.Instance.IntroMapSettingTutorial();
         }
         else if (num == 2)
         {

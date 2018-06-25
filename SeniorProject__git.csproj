@@ -332,6 +332,7 @@
     <Compile Include="Assets\04 Script\08 CoreDataBase\GameUiDataBase.cs" />
     <Compile Include="Assets\04 Script\08 CoreDataBase\Singleton.cs" />
     <Compile Include="Assets\04 Script\09 CommonScript\SceneChange.cs" />
+    <Compile Include="Assets\04 Script\09 CommonScript\TestSetActive.cs" />
     <Compile Include="Assets\BulletController.cs" />
     <Compile Include="Assets\EnemyAI.cs" />
     <Compile Include="Assets\EnemyHpUI.cs" />
@@ -348,6 +349,7 @@
     <None Include="Assets\Resources\CharacteristicPointList.xml" />
     <None Include="Assets\Resources\LobbyTopUIList.xml" />
     <None Include="Assets\Resources\MapList.xml" />
+    <None Include="Assets\Resources\MapSettingTutorial.xml" />
     <None Include="Assets\Resources\MenualList_InherentNumber.xml" />
     <None Include="Assets\Resources\MonsterList.xml" />
     <None Include="Assets\Resources\MonsterSummonList.xml" />
