@@ -7,7 +7,7 @@ public class SceneChange : Singleton <SceneChange>
 {
     public void LobbyMapSceneChange()
     {
-        SceneManager.LoadScene("TestMap");
+        SceneManager.LoadScene("MapSetting");
     }
 
     public void MapLobbySceneChange()
@@ -22,6 +22,18 @@ public class SceneChange : Singleton <SceneChange>
 
     public void LobbyStartGameSceneChange()
     {
-        SceneManager.LoadScene("TestMap2");
+        SceneManager.LoadScene("GameStart");
     }
+
+    /////////////////////////////////////////////////////////////////////////////
+    public void IntroMapSettingTutorial()
+    {
+        SceneManager.LoadScene("MapSettingTutorial");
+    }
+
+    public void MapSettingGameStartTutorial()
+    {
+        SceneManager.LoadScene("GameStartTutorial");
+    }
+
 }

@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/01 Scene/Intro.unity
     guid: 875a606a4185e774994e9ca2591365a3
   - enabled: 1
+    path: Assets/01 Scene/MapSetting.unity
+    guid: f572c701d92cc314a8134c5535e68e65
+  - enabled: 1
     path: Assets/01 Scene/Lobby.unity
     guid: c17e9d20c45df1a49abb9c7924ee165b
   - enabled: 1
-    path: Assets/01 Scene/Map.unity
-    guid: fc5ab1d2873d05945ae938b5eea50172
-  - enabled: 1
-    path: Assets/01 Scene/TestMap.unity
-    guid: f572c701d92cc314a8134c5535e68e65
-  - enabled: 1
-    path: Assets/01 Scene/TestMap2.unity
+    path: Assets/01 Scene/GameStart.unity
     guid: 61dd9804669230f488091b06565536ec

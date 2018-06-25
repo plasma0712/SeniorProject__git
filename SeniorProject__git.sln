@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeniorProject__git", "SeniorProject__git.csproj", "{EB0FDC53-10CB-FC81-5592-25D742602936}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeniorProject__git.Editor", "SeniorProject__git.Editor.csproj", "{2F3767A2-1855-988E-9737-55C11470352F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{EB0FDC53-10CB-FC81-5592-25D742602936}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB0FDC53-10CB-FC81-5592-25D742602936}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB0FDC53-10CB-FC81-5592-25D742602936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F3767A2-1855-988E-9737-55C11470352F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3767A2-1855-988E-9737-55C11470352F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3767A2-1855-988E-9737-55C11470352F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3767A2-1855-988E-9737-55C11470352F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
