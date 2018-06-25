@@ -154,6 +154,7 @@ public class MonsterSummon : Singleton<MonsterSummon>
     {
         if (bBuy == true)
         {
+            TutorialText.Instance.SummonSuccess++;
             if (Input.GetMouseButtonDown(0))        // 소환 시키기
             {
                 if (iTileNumbering == 1 && DoingSummon == true)
@@ -165,13 +166,14 @@ public class MonsterSummon : Singleton<MonsterSummon>
                     //MonsterPlacement.Instance._iCount = XMLMonster.Instance.MonsterLegth().ToString();
                     XMLMonsterSummon.Instance.LoadXml();
                     XMLMonsterSummon.Instance.AddXmlNode(iNumber.ToString(), XMLMonsterSummon.Instance.MonsterSummonLegth().ToString(), fPosX.ToString(), fPosY.ToString());
-                    Debug.Log("개시발"+XMLMonsterSummon.Instance.MonsterSummonLegth());
+                    //Debug.Log("개시발"+XMLMonsterSummon.Instance.MonsterSummonLegth());
                     bBuy = false;
                     TileIn = false;
 
                     DoubleSummon = false;
                     Debug.Log("DoubleSummon : " + DoubleSummon);
                     iTileNumbering = 0;
+
                 }
                 else
                 {

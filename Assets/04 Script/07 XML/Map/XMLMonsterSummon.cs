@@ -57,7 +57,7 @@ public class XMLMonsterSummon : Singleton<XMLMonsterSummon>
 
         childNode.SetAttribute("InherentNumber", InherentNumber); // 짜증나네
         childNode.SetAttribute("iCount", iCount); // 문제될수도있음
-        Debug.Log("인헐트넘버 뭐냐 시발아" + InherentNumber);
+        //Debug.Log("인헐트넘버 뭐냐 시발아" + InherentNumber);
         childNode.SetAttribute("fPosX", fPosX);
         childNode.SetAttribute("fPosY", fPosY);
 

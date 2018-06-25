@@ -351,10 +351,10 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 164
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\n\uC548\uB155\uD558\uC138\uC694 \uC8FC\uC778\uB2D8 .\n\n\uC804 \uC8FC\uC778\uB2D8\uC744
@@ -965,7 +965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &727653627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1023,7 +1023,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 727653629}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 999158820}
+        m_MethodName: BeforeText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &727653629
@@ -1363,6 +1374,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 999158818}
+  - component: {fileID: 999158820}
+  - component: {fileID: 999158819}
+  - component: {fileID: 999158821}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -1385,6 +1399,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999158819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999158817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce3a3a5724805d4c9f872d416f9a88e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Before: {fileID: 727653626}
+  Next: {fileID: 1894087869}
+  Finish: {fileID: 2116716004}
+--- !u!114 &999158820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999158817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855bf9544bd3d55469bdc95ea1525701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SummonSuccess: 0
+  TextNumber: 0
+  GoldSoulNumber: 0
+  TutorialMenualText: {fileID: 128220732}
+  Lily: {fileID: 1382042989}
+  Culling: {fileID: 1211913837}
+  MonsterList: {fileID: 1266784136}
+--- !u!114 &999158821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999158817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb51bbcd451604b83cbd4bd67338a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1067809671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1775,7 @@ GameObject:
   - component: {fileID: 1382042990}
   - component: {fileID: 1382042991}
   m_Layer: 0
-  m_Name: "\uB9B4\uB9AC"
+  m_Name: Lily
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1768,9 +1825,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -832405793
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ecde203dd0619fa4b9762e5aa2be2ec0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2104,7 +2161,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1894087872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 999158820}
+        m_MethodName: NextText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1894087872
@@ -2385,7 +2453,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2116716007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 999158821}
+        m_MethodName: LobbyStartGameSceneChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2116716007
@@ -2455,7 +2534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 359.3, y: 758.6533}
+  m_AnchoredPosition: {x: -929, y: 758.6533}
   m_SizeDelta: {x: 282.6, y: 73.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138293564

@@ -58,6 +58,9 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
 
     public void SummonButtonClick()
     {
-        MonsterSummon.Instance.Summon((int)fNumber,(int)fGold,(int)fSoul);
+        MonsterSummon.Instance.Summon((int)fNumber,(int)fGold,(int)fSoul);        
     }
+
+    
+    
 }
