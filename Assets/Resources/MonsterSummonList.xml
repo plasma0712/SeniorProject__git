@@ -1,3 +1,5 @@
 <MonsterSummonList>
   <MonsterSummon InherentNumber="0" iCount="0" fPosX="1.86" fPosY="2.48" />
+  <MonsterSummon InherentNumber="1" iCount="0" fPosX="1.86" fPosY="3.72" />
+  <MonsterSummon InherentNumber="2" iCount="0" fPosX="1.86" fPosY="1.24" />
 </MonsterSummonList>

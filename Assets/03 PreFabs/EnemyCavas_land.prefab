@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 223713262928752238}
   - component: {fileID: 114138943190095156}
   - component: {fileID: 114218612373074244}
-  - component: {fileID: 114281563068145304}
   m_Layer: 0
   m_Name: EnemyCavas_land
   m_TagString: Untagged
@@ -128,20 +127,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114281563068145304
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1740458007217654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb96ba747b14a914a82ac225b41acf61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RL: {fileID: 0}
-  HelthBar: {fileID: 114918064829491018}
-  Amount: 0
 --- !u!114 &114918064829491018
 MonoBehaviour:
   m_ObjectHideFlags: 1

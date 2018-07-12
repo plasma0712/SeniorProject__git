@@ -12,6 +12,7 @@ TagManager:
   - RightRotation
   - Tower
   - Range
+  - Start
   layers:
   - Default
   - TransparentFX

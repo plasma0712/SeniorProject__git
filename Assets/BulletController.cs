@@ -16,7 +16,6 @@ public class BulletController : Singleton<BulletController>
     public bool TargetLife;
 
     public bool TargetFinalDestory = false;
-
     // Use this for initialization
     void Start()
     {
@@ -24,7 +23,7 @@ public class BulletController : Singleton<BulletController>
         TargetLife = false;
         animator = BulletCore.gameObject.GetComponentInChildren<Animator>();
         Enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyMove>();
-        MonsterAttack_Range = GameObject.FindWithTag("Range").GetComponent<MonsterAttack>();
+        //MonsterAttack_Range = GameObject.FindWithTag("Range").GetComponent<MonsterAttack>();
     }
 
     // Update is called once per frame
@@ -66,12 +65,9 @@ public class BulletController : Singleton<BulletController>
             //  Debug.Log("총알충돌");
             Enemy.MinusHp(damage);
             bullet_Destory = true;
-            Destroy(this.gameObject, 1.0f);
-            MonsterAttack_Range.GetComponent<MonsterAttack>().tag_time = false;
-            MonsterAttack.Instance.tag_time = false;
+            //Destroy(this.gameObject, 1.0f); Bullet_Destory가 true가 될 때 Update문에서 처리함 중복처리라서 제거
+            //MonsterAttack_Range.GetComponent<MonsterAttack>().tag_time = false; // 공격속도를 처리하려고 했는데 그럴필요보다는 enemy에서 코루틴으로 처리해야할듯 이줄 삭제요망
+            //MonsterAttack.Instance.tag_time = false;
         }
     }
-
-
-
 }

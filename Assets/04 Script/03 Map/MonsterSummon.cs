@@ -26,8 +26,8 @@ public class MonsterSummon : Singleton<MonsterSummon>
 
     bool PossibleSummon = false; // 소환이 가능한지 않한지 확인하기 위한 bool TileNumbering이 1인경우에만 가능하게 할것
 
-    public bool FundGoldUse = true; // Gold 없을 때 Soul 소모 안하게 하기 위함
-    public bool FundSoulUse = true; // Soul 없을 때 Gold 소모 안하게 하기 위함
+    public bool FundGoldUse = false; // Gold 없을 때 Soul 소모 안하게 하기 위함
+    public bool FundSoulUse = false; // Soul 없을 때 Gold 소모 안하게 하기 위함
 
     bool DoubleSummon = false; // 소환중에 소환이 안되게 하기 위함
 
@@ -116,11 +116,11 @@ public class MonsterSummon : Singleton<MonsterSummon>
             LobbyTopUIData.Instance.MonsterSummonUseGold(iGold);
             LobbyTopUIData.Instance.MonsterSummonUseSoul(iSoul);
 
-            if (FundGoldUse == false)
+            if (FundGoldUse == false && FundSoulUse == true)
             {
                 LobbyTopUIData.Instance.GetSoul(iSoul);
             }
-            if (FundSoulUse == false)
+            if (FundSoulUse == false && FundGoldUse == true)
             {
                 LobbyTopUIData.Instance.GetGold(iGold);
             }
@@ -166,7 +166,6 @@ public class MonsterSummon : Singleton<MonsterSummon>
                     //MonsterPlacement.Instance._iCount = XMLMonster.Instance.MonsterLegth().ToString();
                     XMLMonsterSummon.Instance.LoadXml();
                     XMLMonsterSummon.Instance.AddXmlNode(iNumber.ToString(), XMLMonsterSummon.Instance.MonsterSummonLegth().ToString(), fPosX.ToString(), fPosY.ToString());
-                    //Debug.Log("개시발"+XMLMonsterSummon.Instance.MonsterSummonLegth());
                     bBuy = false;
                     TileIn = false;
 

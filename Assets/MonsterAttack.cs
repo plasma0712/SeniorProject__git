@@ -12,8 +12,8 @@ public class MonsterAttack : Singleton<MonsterAttack>
 
     //public float delay_bullet = 0;
 
-
-    // Use this for initialization
+    public List<GameObject> ObjectInRangeList = new List<GameObject>();
+    GameObject ObjectInRange;
 
     void Fire()
     {
@@ -31,7 +31,13 @@ public class MonsterAttack : Singleton<MonsterAttack>
         if (col.gameObject.tag == "Enemy")
         {
             Fire();
+            ObjectInRangeList.Add((GameObject)col);
         }
+
+    }
+
+    void OnTriggerExit(Collider col)
+    {
     }
 
     IEnumerator DelayBullet()

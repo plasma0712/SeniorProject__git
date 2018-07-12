@@ -104,7 +104,7 @@ MonoBehaviour:
   BulletCore: {fileID: 1660975047140612}
   MonsterAttack_Range: {fileID: 0}
   Enemy: {fileID: 0}
-  damage: 10
+  damage: 9
   TargetLife: 0
   TargetFinalDestory: 0
 --- !u!135 &135353370853269348

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114182583234467400}
   m_Layer: 0
   m_Name: Start
-  m_TagString: Untagged
+  m_TagString: Start
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,5 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   My: {fileID: 1427127162464216}
-  Enemey: {fileID: 4325902114171852, guid: 3790e7c729961204293ee2d000c0f536, type: 2}
+  Enemey: {fileID: 1921800562549918, guid: 3790e7c729961204293ee2d000c0f536, type: 2}
   iSecond: 1
+  iCountingMonster: 0
+  MonsterList: []
+  MonsterObject: {fileID: 0}

@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySummon : MonoBehaviour
+public class EnemySummon : Singleton<EnemySummon>
 {
     public GameObject My;
-    public Transform Enemey;
+    //public Transform Enemey; 문제생기면 GameObject Enemey 삭제후 넣으면 됨
+    public GameObject Enemey;
 
     public int iSecond = 1; // 나중에 난이도에 따라 조절 할 예정
     public int iCountingMonster = 0;
 
+    public List<GameObject> MonsterList = new List<GameObject>();
+    public GameObject MonsterObject;
     private void Start()
     {
-        //Debug.Log("되냐? 어  씨발아 되냐고 씨발");
         StartCoroutine("EnemeySummon");
     }
 
@@ -20,11 +22,12 @@ public class EnemySummon : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(Enemey, My.transform.position, Quaternion.identity);
+            MonsterObject = Instantiate(Enemey, My.transform.position, Quaternion.identity);
             iCountingMonster++;
+            MonsterList.Add(MonsterObject);
             yield return new WaitForSeconds(iSecond);
             
-            if(iCountingMonster>=10)
+            if(iCountingMonster>=10)//10개 까지만 생산
             {
                 StopCoroutine("EnemeySummon");
             }
