@@ -147,7 +147,9 @@ public class MonsterSummon : Singleton<MonsterSummon>
     public void SummonCurring(int _iNumber, float _vPosX, float _vPosY)
     {
         iNumber = _iNumber;
-        Instantiate(BuyMonsterSummon[iNumber], new Vector3(_vPosX, _vPosY, 0), Quaternion.identity);
+        GameObject instance = Instantiate(BuyMonsterSummon[iNumber], new Vector3(_vPosX, _vPosY, 0), Quaternion.identity);
+
+        MonsterPlacement.Instance.MonsterList.Add(instance); // 타워 관리차원
     }
 
     public void MouseClick(float fPosX, float fPosY)

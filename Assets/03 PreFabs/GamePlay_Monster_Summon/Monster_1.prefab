@@ -152,12 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dba4a3e1a59b824591e9def767c9911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Body: {fileID: 1149390742646606}
   bullet: {fileID: 1953969276773152, guid: 2f38352e1f6e2ba46b78062e302cbd44, type: 2}
   firePos: {fileID: 4214899305408266}
   time: 0
   tag_time: 0
-  delay_bullet: 0
-  Shooting: 0
+  ObjectInRangeList: []
+  MySelf: 0
 --- !u!114 &114903408299930302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,7 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9ed45f898d18f49bf1dbb1c63bf67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoingSummon: 1
 --- !u!135 &135250883716758220
 SphereCollider:
   m_ObjectHideFlags: 1

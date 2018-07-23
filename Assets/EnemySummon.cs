@@ -23,6 +23,7 @@ public class EnemySummon : Singleton<EnemySummon>
         while (true)
         {
             MonsterObject = Instantiate(Enemey, My.transform.position, Quaternion.identity);
+            //MonsterAttack.Instance.EnemeyList(iCountingMonster);
             iCountingMonster++;
             MonsterList.Add(MonsterObject);
             yield return new WaitForSeconds(iSecond);
