@@ -22,7 +22,7 @@ public class BulletController : Singleton<BulletController>
         bullet_Destory = false;
         TargetLife = false;
         animator = BulletCore.gameObject.GetComponentInChildren<Animator>();
-        //Enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyMove>();
+        Enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyMove>();
         //MonsterAttack_Range = GameObject.FindWithTag("Range").GetComponent<MonsterAttack>();
     }
 
