@@ -8,6 +8,10 @@ public class EnemyMove : MonoBehaviour
     public int CurHp;
     public int MaxHp;
 
+    public int Count;
+    /////////////////////////////////////////////////////////
+    // MonsterAttack을 이용할 예정
+    MonsterAttack MKList;
     /////////////////////////////////////////////////////////
     // Start 부분에서 몬스터 List 받아오기 필요없으면 /// 부분 통째로 삭제하면됨
     public EnemySummon StartObject;
@@ -16,6 +20,8 @@ public class EnemyMove : MonoBehaviour
     private void Start()
     {
         StartObject = GameObject.FindWithTag("Start").GetComponent<EnemySummon>();
+        MKList = GameObject.Find("Culling").GetComponent<MonsterAttack>();
+        Count = EnemySummon.Instance.iCountingMonster;
     }
 
     // Update is called once per frame
@@ -53,13 +59,24 @@ public class EnemyMove : MonoBehaviour
             Destroy(this.gameObject);
             BulletController.Instance.TargetFinalDestory = true;
         }
+        else if(other.gameObject.GetComponent<MonsterAttack>())
+        {
+            MonsterAttack.Instance.ObjectInRangeList.Add(this.gameObject.GetComponent<EnemyMove>());
+        }
         else
         {
             return;
         }
-        Debug.Log("3D트리거");
-
+        //Debug.Log("3D트리거");
     }
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if(other.gameObject.tag == "Range")
+    //    {
+    //        MonsterAttack.Instance.ObjectInRangeList.Remove(this.gameObject);
+    //    }
+    //}
 
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -412,6 +412,8 @@ MonoBehaviour:
   MonsterPosYData: 0
   vPos: {x: 0, y: 0, z: 0}
   _iCount: 
+  MonsterList: []
+  MonsterLists: []
 --- !u!114 &1211913844
 MonoBehaviour:
   m_ObjectHideFlags: 0

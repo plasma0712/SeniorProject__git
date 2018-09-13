@@ -375,8 +375,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 178429167}
-  - component: {fileID: 178429169}
   - component: {fileID: 178429168}
+  - component: {fileID: 178429169}
   m_Layer: 0
   m_Name: ExitBoxObject
   m_TagString: Untagged
@@ -737,8 +737,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 979123197}
-  - component: {fileID: 979123199}
   - component: {fileID: 979123198}
+  - component: {fileID: 979123199}
   m_Layer: 0
   m_Name: NewGameBoxObject
   m_TagString: Untagged
@@ -1158,8 +1158,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1492342448}
-  - component: {fileID: 1492342450}
   - component: {fileID: 1492342449}
+  - component: {fileID: 1492342450}
   m_Layer: 0
   m_Name: CreditBoxObject
   m_TagString: Untagged
@@ -1673,8 +1673,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2065438875}
-  - component: {fileID: 2065438877}
   - component: {fileID: 2065438876}
+  - component: {fileID: 2065438877}
   m_Layer: 0
   m_Name: LoadGameBoxObject
   m_TagString: Untagged

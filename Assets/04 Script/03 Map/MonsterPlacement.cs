@@ -23,13 +23,13 @@ public class MonsterPlacement : Singleton<MonsterPlacement>
     public string _iCount;
     //public MonsterSummon[] MonsterSummons = new MonsterSummon[10];
 
+    public List<GameObject> MonsterList = new List<GameObject>();
+
+    public GameObject[] MonsterLists;
+
     private void Awake()
     {
         CullingMonster();
-    }
-
-    public void Update() // 이거 꼭 고쳐야함
-    {
     }
 
     public void CurrentMonsterData(int _monsterdata)
@@ -44,7 +44,10 @@ public class MonsterPlacement : Singleton<MonsterPlacement>
         vPos.x = MonsterPosXData;
         vPos.y = MonsterPosYData;
 
+        //MonsterAttack.Instance.MySelf = _monsterdata;
         MonsterSummon.Instance.SummonCurring(iCountData, vPos.x, vPos.y);
+         
+        
 
     }
 
@@ -57,5 +60,6 @@ public class MonsterPlacement : Singleton<MonsterPlacement>
             //Debug.Log(k);
         }
     }
+
 
 }

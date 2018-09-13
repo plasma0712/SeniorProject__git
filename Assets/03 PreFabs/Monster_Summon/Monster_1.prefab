@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114100335503941740}
   m_Layer: 0
   m_Name: Monster_1
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9ed45f898d18f49bf1dbb1c63bf67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoingSummon: 1
 --- !u!212 &212746908267349248
 SpriteRenderer:
   m_ObjectHideFlags: 1
