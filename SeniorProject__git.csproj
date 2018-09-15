@@ -310,6 +310,7 @@
     <Compile Include="Assets\04 Script\03 Map\MouseSeletionPoint.cs" />
     <Compile Include="Assets\04 Script\03 Map\TileInfo.cs" />
     <Compile Include="Assets\04 Script\03 Map\TouchManager.cs" />
+    <Compile Include="Assets\04 Script\03 Map\Tutorial\LabelText.cs" />
     <Compile Include="Assets\04 Script\03 Map\Tutorial\TutorialText.cs" />
     <Compile Include="Assets\04 Script\03 Map\Unit.cs" />
     <Compile Include="Assets\04 Script\06 Common\CommonSetActive.cs" />
