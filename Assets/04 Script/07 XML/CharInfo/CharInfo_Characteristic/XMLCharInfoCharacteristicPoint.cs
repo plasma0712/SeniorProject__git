@@ -15,6 +15,35 @@ public class XMLCharInfoCharacteristicPoint : Singleton<XMLCharInfoCharacteristi
         LoadXml();
     }
 
+    public void NewGameCreateXml()
+    {
+        CharacteristicPoints = new List<XMLCharInfoCharacteristicPointData>();
+
+        for (int i = 0; i < 1; i++)
+        {
+            XMLCharInfoCharacteristicPointData CharacteristicPoint = new XMLCharInfoCharacteristicPointData
+            {
+                iPoint = i,
+            };
+            CharacteristicPoints.Add(CharacteristicPoint);
+        }
+
+        XmlDocument Document = new XmlDocument();
+        XmlElement CharacteristicPointListElement = Document.CreateElement("CharacteristicPointList");
+        Document.AppendChild(CharacteristicPointListElement);
+
+        foreach (XMLCharInfoCharacteristicPointData CharacteristicPoint in CharacteristicPoints)
+        {
+            XmlElement CharacteristicPointElement = Document.CreateElement("CharacteristicPoint");
+            CharacteristicPointElement.SetAttribute("iPoint", CharacteristicPoint.iPoint.ToString());
+
+            CharacteristicPointListElement.AppendChild(CharacteristicPointElement);
+        }
+        Document.Save(filePath);
+
+        LoadXml();
+    }
+
     public void CreateXml()
     {
         CharacteristicPoints = new List<XMLCharInfoCharacteristicPointData>();

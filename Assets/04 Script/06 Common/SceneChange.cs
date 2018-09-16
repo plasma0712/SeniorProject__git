@@ -28,6 +28,12 @@ public class SceneChange : Singleton <SceneChange>
     /////////////////////////////////////////////////////////////////////////////
     public void IntroMapSettingTutorial()
     {
+        XMLCharInfoCharacteristicPoint.Instance.NewGameCreateXml();
+        XMLCharInfoTendency.Instance.NewGameCreateXml();
+        XMLLobbyTopUI.Instance.NewGameCreateXml();
+        XMLCharInfoCharacteristic.Instance.CreateXml();
+
+        //넘어가기전에 XML을 Create해야하기 때문에(NEW 게임이니깐) 
         SceneManager.LoadScene("MapSettingTutorial");
     }
 

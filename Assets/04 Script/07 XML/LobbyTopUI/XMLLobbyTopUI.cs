@@ -16,6 +16,42 @@ public class XMLLobbyTopUI : Singleton<XMLLobbyTopUI>
         LoadXml();
     }
 
+    public void NewGameCreateXml()
+    {
+        LobbyTopUIs = new List<XMLLobbyTopUIData>();
+
+        for (int i = 0; i < 1; i++)
+        {
+            XMLLobbyTopUIData LobbyTopUI = new XMLLobbyTopUIData
+            {
+                iGold = i,        // XML 저장 할 것 미리 염두해두어 만들었음. 
+                iSoul = i,        // XML 저장 할 것 미리 염두해두어 만들었음. 
+                iHeart = i       // XML 저장 할 것 미리 염두해두어 만들었음. 
+            };
+            LobbyTopUIs.Add(LobbyTopUI);
+        }
+
+        XmlDocument Document = new XmlDocument();
+        XmlElement LobbyTopUIListElement = Document.CreateElement("LobbyTopUIList");
+        Document.AppendChild(LobbyTopUIListElement);
+
+        foreach (XMLLobbyTopUIData LobbyTopUI in LobbyTopUIs)
+        {
+            XmlElement LobbyTopUIElement = Document.CreateElement("LobbyTopUI");
+            LobbyTopUIElement.SetAttribute("iGold", LobbyTopUI.iGold.ToString());
+            LobbyTopUIElement.SetAttribute("iSoul", LobbyTopUI.iSoul.ToString());
+            LobbyTopUIElement.SetAttribute("iHeart", LobbyTopUI.iHeart.ToString());
+
+            LobbyTopUIListElement.AppendChild(LobbyTopUIElement);
+        }
+        Document.Save(filePath);
+
+        LoadXml();
+    }
+
+
+
+
     public void CreateXml()
     {
         LobbyTopUIs = new List<XMLLobbyTopUIData>();

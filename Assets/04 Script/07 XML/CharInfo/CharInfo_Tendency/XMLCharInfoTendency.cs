@@ -15,6 +15,38 @@ public class XMLCharInfoTendency : Singleton<XMLCharInfoTendency>
          LoadXml();
     }
 
+    public void NewGameCreateXml()
+    {
+        Tendencys = new List<XMLCharInfoTendencyData>();
+
+        for (int i = 0; i < 1; i++)
+        {
+            XMLCharInfoTendencyData Tendency = new XMLCharInfoTendencyData
+            {
+                fSanctity = i,
+                fDarkNess = i,
+                fHeart = i
+            };
+            Tendencys.Add(Tendency);
+        }
+
+        XmlDocument Document = new XmlDocument();
+        XmlElement TendencyListElement = Document.CreateElement("TendencyList");
+        Document.AppendChild(TendencyListElement);
+
+        foreach (XMLCharInfoTendencyData Tendency in Tendencys)
+        {
+            XmlElement TendencyElement = Document.CreateElement("Tendency");
+            TendencyElement.SetAttribute("fSanctity", Tendency.fSanctity.ToString());
+            TendencyElement.SetAttribute("fDarkNess", Tendency.fDarkNess.ToString());
+            TendencyElement.SetAttribute("fHeart", Tendency.fHeart.ToString());
+
+            TendencyListElement.AppendChild(TendencyElement);
+        }
+        Document.Save(filePath);
+    }
+
+
     public void CreateXml()
     {
         Tendencys = new List<XMLCharInfoTendencyData>();
