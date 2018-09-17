@@ -13,8 +13,10 @@ public class XMLMonsterSummon : Singleton<XMLMonsterSummon>
 
     private void Awake()
     {
+        //Create();
         LoadXml();
     }
+
 
     public void Create()
     {
