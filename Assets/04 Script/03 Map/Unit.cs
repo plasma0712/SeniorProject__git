@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : UnitInfo
+public class Unit : ObjectInfo
 {
 
 	// Use this for initialization

@@ -10,7 +10,7 @@ public class BulletController : Singleton<BulletController>
     //    public GameObject player;
     bool bullet_Destory;
     public GameObject BulletCore;
-    public MonsterAttack MonsterAttack_Range;
+    public TowerAttack MonsterAttack_Range;
     public EnemyMove Enemy;
     public int damage;
     public bool TargetLife;

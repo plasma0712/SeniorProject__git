@@ -11,7 +11,7 @@ public class EnemyMove : MonoBehaviour
     public int Count;
     /////////////////////////////////////////////////////////
     // MonsterAttack을 이용할 예정
-    MonsterAttack MKList;
+    TowerAttack MKList;
     /////////////////////////////////////////////////////////
     // Start 부분에서 몬스터 List 받아오기 필요없으면 /// 부분 통째로 삭제하면됨
     public EnemySummon StartObject;
@@ -20,7 +20,7 @@ public class EnemyMove : MonoBehaviour
     private void Start()
     {
         StartObject = GameObject.FindWithTag("Start").GetComponent<EnemySummon>();
-        MKList = GameObject.Find("Culling").GetComponent<MonsterAttack>();
+        MKList = GameObject.Find("Culling").GetComponent<TowerAttack>();
         Count = EnemySummon.Instance.iCountingMonster;
     }
 
@@ -59,9 +59,9 @@ public class EnemyMove : MonoBehaviour
             Destroy(this.gameObject);
             BulletController.Instance.TargetFinalDestory = true;
         }
-        else if(other.gameObject.GetComponent<MonsterAttack>())
+        else if(other.gameObject.GetComponent<TowerAttack>())
         {
-            MonsterAttack.Instance.ObjectInRangeList.Add(this.gameObject.GetComponent<EnemyMove>());
+            TowerAttack.Instance.ObjectInRangeList.Add(this.gameObject.GetComponent<EnemyMove>());
         }
         else
         {
