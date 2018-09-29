@@ -8,12 +8,12 @@ public class BulletController : Singleton<BulletController>
     Animator animator;
 
     //    public GameObject player;
-    bool bullet_Destory;
     public GameObject BulletCore;
     public TowerAttack MonsterAttack_Range;
     public EnemyMove Enemy;
     public int damage;
     public bool TargetLife;
+    bool bullet_Destory;
 
     public bool TargetFinalDestory = false;
     // Use this for initialization

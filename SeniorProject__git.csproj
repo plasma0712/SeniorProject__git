@@ -348,6 +348,7 @@
     <Compile Include="Assets\RotationBox.cs" />
     <Compile Include="Assets\RotationBoxSummon.cs" />
     <Compile Include="Assets\TowerAttack.cs" />
+    <Compile Include="Assets\UI_animaiton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\CharacteristicList.xml" />
