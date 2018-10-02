@@ -3,7 +3,7 @@
   <MapSettingTutorial InherentNumber="1" MenualExplanationText="주인님은 앞으로 공격해 올 적들에 맞서 싸워야합니다."/>
   <MapSettingTutorial InherentNumber="2" MenualExplanationText="일단, 골드과 소울을 드리겠습니다."/>
   <MapSettingTutorial InherentNumber="3" MenualExplanationText="재화를 효율적으로 써야 적들을 물리칠 수 있습니다."/>
-  <MapSettingTutorial InherentNumber="4" MenualExplanationText="재화를 이용해 보겠습니다. 100 골드와 100 소울 짜리를 사 보도록 하겠습니다."/>
+  <MapSettingTutorial InherentNumber="4" MenualExplanationText="재화를 이용해 보겠습니다."/>
   <MapSettingTutorial InherentNumber="5" MenualExplanationText="적당해 보이는곳에 눌러주세요."/>
   <MapSettingTutorial InherentNumber="6" MenualExplanationText="다음 단계를 설명 해드리겠습니다."/>
 </MapSettingTutorialList>
