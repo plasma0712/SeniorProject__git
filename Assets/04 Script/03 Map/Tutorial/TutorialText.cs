@@ -16,7 +16,11 @@ public class TutorialText : Singleton<TutorialText>
     public GameObject Culling;
     public GameObject MonsterList;
 
+    private Text TemporatySave;
     MapSettingTutorialText CurrentText;
+    int TextCount = 0; // 이것을 토대로 insert로 대입할 예정
+
+    public float TextTime;
 
     private void Update()
     {
@@ -34,12 +38,40 @@ public class TutorialText : Singleton<TutorialText>
         }
     }
 
+    private void Awake()
+    {
+        StartCoroutine("TutorialTextCoroutine");
+    }
+
 
     public void CurrentTutorialText()
     {
         CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
+        //
         TutorialMenualText.text = CurrentText.MenualExplanationText;
+
+        
     }
+
+
+   
+    IEnumerator TutorialTextCoroutine()
+    {     
+        /// <summary>
+        /// CurrentText에서 text를 미리 캐싱해놓음
+        /// </summary>
+        CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
+        TemporatySave.text = CurrentText.MenualExplanationText;
+        while (true)
+        {
+            TutorialMenualText.text = TutorialMenualText.text.Insert(TutorialMenualText.text.Length, TemporatySave.text[TextCount]);
+            yield return new WaitForSeconds(TextTime);
+            TextCount++;
+            
+        }
+    }
+
+
 
     public void NextText()
     {
