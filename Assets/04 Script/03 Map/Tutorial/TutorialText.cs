@@ -16,15 +16,15 @@ public class TutorialText : Singleton<TutorialText>
     public GameObject Culling;
     public GameObject MonsterList;
 
-    private Text TemporatySave;
+    public Text TemporatySave;
     MapSettingTutorialText CurrentText;
     int TextCount = 0; // 이것을 토대로 insert로 대입할 예정
 
-    public float TextTime;
+    public float TextTime = 10f;
 
     private void Update()
     {
-        CurrentTutorialText();
+        //CurrentTutorialText();
         if(GoldSoulNumber==0&&TextNumber==2)
         {
             LobbyTopUIData.Instance.GetGold(100);
@@ -48,9 +48,7 @@ public class TutorialText : Singleton<TutorialText>
     {
         CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
         //
-        TutorialMenualText.text = CurrentText.MenualExplanationText;
-
-        
+        TutorialMenualText.text = CurrentText.MenualExplanationText;       
     }
 
 
@@ -64,10 +62,10 @@ public class TutorialText : Singleton<TutorialText>
         TemporatySave.text = CurrentText.MenualExplanationText;
         while (true)
         {
-            TutorialMenualText.text = TutorialMenualText.text.Insert(TutorialMenualText.text.Length, TemporatySave.text[TextCount]);
+            TutorialMenualText.text = TutorialMenualText.text.ToString().Insert(TutorialMenualText.text.ToString().Length, TemporatySave.text[TextCount].ToString());
             yield return new WaitForSeconds(TextTime);
             TextCount++;
-            
+            // currentText의 길이값 보다 커지면 break 걸어야할듯?
         }
     }
 
@@ -76,7 +74,7 @@ public class TutorialText : Singleton<TutorialText>
     public void NextText()
     {
         TextNumber++;
-        if(TextNumber==5)
+        if(TextNumber==5) // 맵에 타워 세울 때
         {
             Lily.gameObject.SetActive(false);
             Culling.gameObject.SetActive(true);
