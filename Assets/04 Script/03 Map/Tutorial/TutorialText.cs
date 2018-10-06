@@ -20,7 +20,7 @@ public class TutorialText : Singleton<TutorialText>
     MapSettingTutorialText CurrentText;
     int TextCount = 0; // 이것을 토대로 insert로 대입할 예정
 
-    public float TextTime = 10f;
+    public float TextTime;
 
     private void Update()
     {
@@ -65,15 +65,28 @@ public class TutorialText : Singleton<TutorialText>
             TutorialMenualText.text = TutorialMenualText.text.ToString().Insert(TutorialMenualText.text.ToString().Length, TemporatySave.text[TextCount].ToString());
             yield return new WaitForSeconds(TextTime);
             TextCount++;
+            if(TemporatySave.text.ToString().Length<=TutorialMenualText.text.ToString().Length)
+            {
+                Debug.Log("여기 지나나?");
+                TextCount = 0; // 텍스트 카운트 리셋시켜줌
+                StopCoroutine("TutorialTextCoroutine");
+                break;
+            }
             // currentText의 길이값 보다 커지면 break 걸어야할듯?
         }
     }
 
-
+    public void TextSkip()
+    {
+        StopCoroutine("TutorialTextCoroutine");
+        TutorialMenualText.text = TemporatySave.text;
+        gameObject.SetActive(true);
+    }
 
     public void NextText()
     {
         TextNumber++;
+        StartCoroutine("TutorialTextCoroutine");
         if(TextNumber==5) // 맵에 타워 세울 때
         {
             Lily.gameObject.SetActive(false);
