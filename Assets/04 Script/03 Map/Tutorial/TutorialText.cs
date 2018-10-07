@@ -17,11 +17,13 @@ public class TutorialText : Singleton<TutorialText>
     public GameObject MonsterList;
 
     public Text TemporatySave;
+    public Text DummyText;
     MapSettingTutorialText CurrentText;
     int TextCount = 0; // 이것을 토대로 insert로 대입할 예정
 
     public float TextTime;
-
+    public GameObject NextButton;
+    public GameObject SkipButton;
     private void Update()
     {
         //CurrentTutorialText();
@@ -54,10 +56,12 @@ public class TutorialText : Singleton<TutorialText>
 
    
     IEnumerator TutorialTextCoroutine()
-    {     
+    {
         /// <summary>
         /// CurrentText에서 text를 미리 캐싱해놓음
         /// </summary>
+        TutorialMenualText.text = DummyText.text;
+        TemporatySave.text = DummyText.text;
         CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
         TemporatySave.text = CurrentText.MenualExplanationText;
         while (true)
@@ -80,12 +84,17 @@ public class TutorialText : Singleton<TutorialText>
     {
         StopCoroutine("TutorialTextCoroutine");
         TutorialMenualText.text = TemporatySave.text;
-        gameObject.SetActive(true);
+        SkipButton.gameObject.SetActive(false);
+        NextButton.gameObject.SetActive(true);
     }
 
     public void NextText()
     {
+        NextButton.gameObject.SetActive(false);
+        SkipButton.gameObject.SetActive(true);
+
         TextNumber++;
+        Debug.Log("NextText에 진입 : " + TextNumber);
         StartCoroutine("TutorialTextCoroutine");
         if(TextNumber==5) // 맵에 타워 세울 때
         {
