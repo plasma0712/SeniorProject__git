@@ -61,7 +61,7 @@ public class EnemyMove : MonoBehaviour
         }
         else if(other.gameObject.GetComponent<TowerAttack>())
         {
-            TowerAttack.Instance.ObjectInRangeList.Add(this.gameObject.GetComponent<EnemyMove>());
+            //TowerAttack.Instance.ObjectInRangeList.Add(this.gameObject.GetComponent<EnemyMove>());
         }
         else
         {

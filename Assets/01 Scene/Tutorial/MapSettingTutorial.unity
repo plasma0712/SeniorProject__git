@@ -1391,8 +1391,8 @@ MonoBehaviour:
   TemporatySave: {fileID: 622690849}
   DummyText: {fileID: 370113884}
   TextTime: 0.2
-  NextButton: {fileID: 1847663357}
-  SkipButton: {fileID: 6483302}
+  NextButton: {fileID: 6483302}
+  SkipButton: {fileID: 0}
 --- !u!114 &999158821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,7 +2064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1847663358
 RectTransform:
   m_ObjectHideFlags: 0

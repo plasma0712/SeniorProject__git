@@ -16,8 +16,7 @@ public class MonsterSelectListManager : Singleton<MonsterSelectListManager>
 
     //List<XMLMonsterData> MonsterDatas;
 
-
-
+    
     public void Init()
     {
         Monsters = new List<MonsterDataSave>();

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerAttack : Singleton<TowerAttack>
+public class TowerAttack : MonoBehaviour
 {
     public GameObject bullet;
     public Transform firePos;

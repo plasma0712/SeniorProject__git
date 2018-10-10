@@ -23,7 +23,10 @@ public class TutorialText : Singleton<TutorialText>
 
     public float TextTime;
     public GameObject NextButton;
-    public GameObject SkipButton;
+    //public GameObject SkipButton;
+
+    
+
     private void Update()
     {
         //CurrentTutorialText();
@@ -43,18 +46,20 @@ public class TutorialText : Singleton<TutorialText>
     private void Awake()
     {
         StartCoroutine("TutorialTextCoroutine");
+        NextButton.gameObject.SetActive(false);
+        //SkipButton.gameObject.SetActive(true);
     }
 
-
+    #region 안씀
     public void CurrentTutorialText()
     {
         CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
         //
         TutorialMenualText.text = CurrentText.MenualExplanationText;       
     }
+    #endregion
 
 
-   
     IEnumerator TutorialTextCoroutine()
     {
         /// <summary>
@@ -64,6 +69,7 @@ public class TutorialText : Singleton<TutorialText>
         TemporatySave.text = DummyText.text;
         CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
         TemporatySave.text = CurrentText.MenualExplanationText;
+        yield return new WaitForSeconds(0.1f); // 일부러 지연시킴 TemporatySave가 빠르게 읽지를 못하는경우가 있어서
         while (true)
         {
             TutorialMenualText.text = TutorialMenualText.text.ToString().Insert(TutorialMenualText.text.ToString().Length, TemporatySave.text[TextCount].ToString());
@@ -71,31 +77,42 @@ public class TutorialText : Singleton<TutorialText>
             TextCount++;
             if(TemporatySave.text.ToString().Length<=TutorialMenualText.text.ToString().Length)
             {
-                Debug.Log("여기 지나나?");
+                //Debug.Log("여기 지나나?");
                 TextCount = 0; // 텍스트 카운트 리셋시켜줌
+
+                NextButton.gameObject.SetActive(true);
                 StopCoroutine("TutorialTextCoroutine");
                 break;
             }
             // currentText의 길이값 보다 커지면 break 걸어야할듯?
         }
     }
-
-    public void TextSkip()
-    {
-        StopCoroutine("TutorialTextCoroutine");
-        TutorialMenualText.text = TemporatySave.text;
-        SkipButton.gameObject.SetActive(false);
-        NextButton.gameObject.SetActive(true);
-    }
+  
+   //
+   //public void TextSkip()
+   //{
+   //    StopCoroutine("TutorialTextCoroutine");
+   //    TutorialMenualText.text = TemporatySave.text;
+   //    NextButton.gameObject.SetActive(true);
+   //    SkipButton.gameObject.SetActive(false);
+   //}
+   //
 
     public void NextText()
     {
-        NextButton.gameObject.SetActive(false);
-        SkipButton.gameObject.SetActive(true);
-
         TextNumber++;
-        Debug.Log("NextText에 진입 : " + TextNumber);
-        StartCoroutine("TutorialTextCoroutine");
+        if(TextNumber==7)
+        {
+            SceneChange.Instance.MapSettingGameStartTutorial();
+        }
+        NextButton.gameObject.SetActive(false);
+        //SkipButton.gameObject.SetActive(true);
+
+        //Debug.Log("NextText에 진입 : " + TextNumber);
+        if (TextNumber < 7)
+        {
+            StartCoroutine("TutorialTextCoroutine");
+        }
         if(TextNumber==5) // 맵에 타워 세울 때
         {
             Lily.gameObject.SetActive(false);
@@ -107,6 +124,7 @@ public class TutorialText : Singleton<TutorialText>
         {
             Lily.gameObject.SetActive(true);
         }
+
     }
     public void BeforeText()
     {
