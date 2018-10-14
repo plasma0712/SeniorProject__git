@@ -333,6 +333,8 @@
     <Compile Include="Assets\04 Script\07 XML\Map\XMLMonsterData.cs" />
     <Compile Include="Assets\04 Script\07 XML\Map\XMLMonsterSummon.cs" />
     <Compile Include="Assets\04 Script\07 XML\Map\XMLMonsterSummonData.cs" />
+    <Compile Include="Assets\04 Script\07 XML\MonsterList_UnLock\XMLMonsterListUnLock.cs" />
+    <Compile Include="Assets\04 Script\07 XML\MonsterList_UnLock\XMLMonsterListUnLockData.cs" />
     <Compile Include="Assets\04 Script\07 XML\Tutorial\XMLMapSettingTutorial.cs" />
     <Compile Include="Assets\04 Script\07 XML\XML_TotalManagement.cs" />
     <Compile Include="Assets\04 Script\08 CoreDataBase\GameMapData.cs" />

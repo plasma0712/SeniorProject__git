@@ -641,6 +641,8 @@ MonoBehaviour:
   tMonsterAttack: {fileID: 114167931638873418}
   tMonsterDefence: {fileID: 114019620274935268}
   fNumber: 0
+  fGold: 0
+  fSoul: 0
 --- !u!222 &222046404284904060
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -847,7 +849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1662, y: 175}
+  m_AnchoredPosition: {x: -1373.2178, y: -341.80298}
   m_SizeDelta: {x: 1080, y: 219.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224569039673069282
