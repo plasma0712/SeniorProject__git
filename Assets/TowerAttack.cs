@@ -13,7 +13,7 @@ public class TowerAttack : MonoBehaviour
     //public float delay_bullet = 0;
     public BulletController BC;
 
-    //public List<GameObject> EnemeyObjectList = new List<GameObject>(); // 이걸 왜 해야하는진 모르겠지만 일단 이용할거임 // 적 생성된 List목록
+    public List<GameObject> EnemeyObjectList = new List<GameObject>(); // 이걸 왜 해야하는진 모르겠지만 일단 이용할거임 // 적 생성된 List목록
     //public List<GameObject> ObjectInRangeList = new List<GameObject>(); //타워범위에 들어온 리스트
     EnemyMove ObjectInRange; // 범위에 들어온 오브젝트(적)
     public List<EnemyMove> ObjectInRangeList = new List<EnemyMove>(); //타워범위에 들어온 리스트
@@ -53,16 +53,16 @@ public class TowerAttack : MonoBehaviour
         if (col.gameObject.tag == "Enemy" && this.gameObject)
         {
             //ObjectInRange = col.gameObject.tag == "Enemey";
-            //Fire();
-            //ObjectInRangeList.Add(ObjectInRange);
+            Fire();
+            ObjectInRangeList.Add(ObjectInRange);
             
         }
 
-        if(col.gameObject.GetComponent<EnemyMove>())
-        {            
-            ObjectInRangeList.Add(ObjectInRange);
-            Debug.Log("일단?");
-        }
+        //if(col.gameObject.GetComponent<EnemyMove>())
+        //{            
+        //    ObjectInRangeList.Add(ObjectInRange);
+        //    Debug.Log("일단?");
+        //}
     }
 
     void OnTriggerExit(Collider col)

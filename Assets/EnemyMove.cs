@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMove : Singleton<EnemyMove>
 {
     public int Speed = 10;
     public int CurHp;

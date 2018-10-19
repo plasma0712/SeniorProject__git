@@ -33,6 +33,8 @@ public class SceneChange : Singleton <SceneChange>
         XMLLobbyTopUI.Instance.NewGameCreateXml();
         XMLCharInfoCharacteristic.Instance.CreateXml();
         XMLMonsterSummon.Instance.Create();
+        XMLMonsterListUnLock.Instance.Create();
+        XMLMonsterListUnLock.Instance.AddXmlNode(XMLMonsterListUnLock.Instance.MonsterListUnLockLegth().ToString(), 1.ToString());// 몬스터 락
 
         //넘어가기전에 XML을 Create해야하기 때문에(NEW 게임이니깐) 
         SceneManager.LoadScene("MapSettingTutorial");

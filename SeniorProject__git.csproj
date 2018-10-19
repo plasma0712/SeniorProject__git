@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -355,11 +357,16 @@
   <ItemGroup>
     <None Include="Assets\Resources\CharacteristicList.xml" />
     <None Include="Assets\Resources\CharacteristicPointList.xml" />
-    <None Include="Assets\Resources\LobbyTopUIList.xml" />
+    <None Include="Assets\Resources\LobbyTopUIList.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Resources\MapList.xml" />
     <None Include="Assets\Resources\MapSettingTutorial.xml" />
     <None Include="Assets\Resources\MenualList_InherentNumber.xml" />
     <None Include="Assets\Resources\MonsterList.xml" />
+    <None Include="Assets\Resources\MonsterListUnLockList.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\Resources\MonsterSummonList.xml" />
     <None Include="Assets\Resources\TendencyList.xml" />
   </ItemGroup>

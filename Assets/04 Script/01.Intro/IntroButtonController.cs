@@ -35,7 +35,7 @@ public class IntroButtonController : MonoBehaviour
         }
         else if (num == 2)
         {
-            //SceneChange.Instance.IntroLobbySceneChange();
+            SceneChange.Instance.LobbyStartGameSceneChange();
         }
         else if (num == 3)
         {

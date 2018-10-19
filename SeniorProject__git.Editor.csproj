@@ -301,6 +301,7 @@
     <None Include="Assets\Resources\MapSettingTutorial.xml" />
     <None Include="Assets\Resources\MenualList_InherentNumber.xml" />
     <None Include="Assets\Resources\MonsterList.xml" />
+    <None Include="Assets\Resources\MonsterListUnLockList.xml" />
     <None Include="Assets\Resources\MonsterSummonList.xml" />
     <None Include="Assets\Resources\TendencyList.xml" />
   </ItemGroup>
