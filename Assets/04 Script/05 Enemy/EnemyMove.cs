@@ -7,6 +7,7 @@ public class EnemyMove : Singleton<EnemyMove>
     public int Speed = 10;
     public int CurHp;
     public int MaxHp;
+    Vector3 MovePoint = Vector3.down;
 
     public int Count;
     /////////////////////////////////////////////////////////
@@ -27,7 +28,8 @@ public class EnemyMove : Singleton<EnemyMove>
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Speed * Time.deltaTime);
+        transform.Translate(MovePoint * Speed * Time.deltaTime);
+        //transform.Translate(Vector3.down * Speed * Time.deltaTime);
 
         if (CurHp <= 0)
         {
@@ -43,6 +45,7 @@ public class EnemyMove : Singleton<EnemyMove>
 
     private void OnTriggerEnter(Collider other)
     {
+        #region 회전 충돌
         if (other.transform.tag == "LeftRotation")
         {
             //Debug.Log("왼쪽");
@@ -57,9 +60,9 @@ public class EnemyMove : Singleton<EnemyMove>
         {
             //Debug.Log("끝남");
             Destroy(this.gameObject);
-            BulletController.Instance.TargetFinalDestory = true;
+            //BulletController.Instance.TargetFinalDestory = true;
         }
-        else if(other.gameObject.GetComponent<TowerAttack>())
+        else if (other.gameObject.GetComponent<TowerAttack>())
         {
             //TowerAttack.Instance.ObjectInRangeList.Add(this.gameObject.GetComponent<EnemyMove>());
         }
@@ -67,16 +70,9 @@ public class EnemyMove : Singleton<EnemyMove>
         {
             return;
         }
-        //Debug.Log("3D트리거");
+        #endregion
     }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if(other.gameObject.tag == "Range")
-    //    {
-    //        MonsterAttack.Instance.ObjectInRangeList.Remove(this.gameObject);
-    //    }
-    //}
 
     void OnTriggerEnter2D(Collider2D other)
     {

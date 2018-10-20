@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33163622558903418}
   - component: {fileID: 23382494126669266}
   - component: {fileID: 135250883716758220}
-  - component: {fileID: 114584121836736096}
+  - component: {fileID: 114711752010075244}
   m_Layer: 0
   m_Name: Range
   m_TagString: Range
@@ -141,7 +141,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1906888, y: 1.15}
   m_EdgeRadius: 0
---- !u!114 &114584121836736096
+--- !u!114 &114711752010075244
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -149,16 +149,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586356029773428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dba4a3e1a59b824591e9def767c9911, type: 3}
+  m_Script: {fileID: 11500000, guid: a33ac12f8e9fc9d498ab0eab30bea973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Body: {fileID: 1149390742646606}
   bullet: {fileID: 1953969276773152, guid: 2f38352e1f6e2ba46b78062e302cbd44, type: 2}
   firePos: {fileID: 4214899305408266}
-  time: 0
-  tag_time: 0
+  BC: {fileID: 0}
+  aaa: 0
   ObjectInRangeList: []
-  MySelf: 0
 --- !u!114 &114903408299930302
 MonoBehaviour:
   m_ObjectHideFlags: 1

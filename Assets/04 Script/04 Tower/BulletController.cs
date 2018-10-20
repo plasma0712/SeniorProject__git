@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : Singleton<BulletController>
+public class BulletController : MonoBehaviour
 {
     public float speed = 50f;
     Animator animator;
@@ -14,6 +14,7 @@ public class BulletController : Singleton<BulletController>
     public int damage;
     public bool TargetLife;
     bool bullet_Destory;
+    bool bulletDamageOnePoint;
 
     public bool TargetFinalDestory = false;
     // Use this for initialization
@@ -60,14 +61,11 @@ public class BulletController : Singleton<BulletController>
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Enemy" )
+        if (other.transform.tag == "Enemy" && bulletDamageOnePoint ==false)
         {
-            //  Debug.Log("총알충돌");
+            bulletDamageOnePoint = true;
             Enemy.MinusHp(damage);
             bullet_Destory = true;
-            //Destroy(this.gameObject, 1.0f); Bullet_Destory가 true가 될 때 Update문에서 처리함 중복처리라서 제거
-            //MonsterAttack_Range.GetComponent<MonsterAttack>().tag_time = false; // 공격속도를 처리하려고 했는데 그럴필요보다는 enemy에서 코루틴으로 처리해야할듯 이줄 삭제요망
-            //MonsterAttack.Instance.tag_time = false;
         }
     }
 }

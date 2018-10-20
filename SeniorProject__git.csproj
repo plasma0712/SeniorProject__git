@@ -316,6 +316,7 @@
     <Compile Include="Assets\04 Script\03 Map\Tutorial\TutorialText.cs" />
     <Compile Include="Assets\04 Script\03 Map\Unit.cs" />
     <Compile Include="Assets\04 Script\04 Tower\BulletController.cs" />
+    <Compile Include="Assets\04 Script\04 Tower\Tower.cs" />
     <Compile Include="Assets\04 Script\04 Tower\TowerAttack.cs" />
     <Compile Include="Assets\04 Script\05 Enemy\EnemyAI.cs" />
     <Compile Include="Assets\04 Script\05 Enemy\EnemyHpUI.cs" />
