@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -310,15 +308,26 @@
     <Compile Include="Assets\04 Script\03 Map\MonsterSelectListManager.cs" />
     <Compile Include="Assets\04 Script\03 Map\MonsterSummon.cs" />
     <Compile Include="Assets\04 Script\03 Map\MouseSeletionPoint.cs" />
+    <Compile Include="Assets\04 Script\03 Map\RotationBox.cs" />
+    <Compile Include="Assets\04 Script\03 Map\RotationBoxSummon.cs" />
     <Compile Include="Assets\04 Script\03 Map\TileInfo.cs" />
     <Compile Include="Assets\04 Script\03 Map\TouchManager.cs" />
     <Compile Include="Assets\04 Script\03 Map\Tutorial\LabelText.cs" />
     <Compile Include="Assets\04 Script\03 Map\Tutorial\TutorialText.cs" />
     <Compile Include="Assets\04 Script\03 Map\Unit.cs" />
+    <Compile Include="Assets\04 Script\04 Tower\BulletController.cs" />
+    <Compile Include="Assets\04 Script\04 Tower\TowerAttack.cs" />
+    <Compile Include="Assets\04 Script\05 Enemy\EnemyAI.cs" />
+    <Compile Include="Assets\04 Script\05 Enemy\EnemyHpUI.cs" />
+    <Compile Include="Assets\04 Script\05 Enemy\EnemyMove.cs" />
+    <Compile Include="Assets\04 Script\05 Enemy\EnemySummon.cs" />
+    <Compile Include="Assets\04 Script\05 Enemy\Movement.cs" />
     <Compile Include="Assets\04 Script\06 Common\CommonSetActive.cs" />
     <Compile Include="Assets\04 Script\06 Common\DontDestory.cs" />
+    <Compile Include="Assets\04 Script\06 Common\ObjectInfo.cs" />
     <Compile Include="Assets\04 Script\06 Common\SceneChange.cs" />
     <Compile Include="Assets\04 Script\06 Common\TestSetActive.cs" />
+    <Compile Include="Assets\04 Script\06 Common\UI_animaiton.cs" />
     <Compile Include="Assets\04 Script\07 XML\CharInfo\CharInfo_Characteristic\XMLCharInfoCharacteristic.cs" />
     <Compile Include="Assets\04 Script\07 XML\CharInfo\CharInfo_Characteristic\XMLCharInfoCharacteristicData.cs" />
     <Compile Include="Assets\04 Script\07 XML\CharInfo\CharInfo_Characteristic\XMLCharInfoCharacteristicPoint.cs" />
@@ -342,31 +351,16 @@
     <Compile Include="Assets\04 Script\08 CoreDataBase\GameMapData.cs" />
     <Compile Include="Assets\04 Script\08 CoreDataBase\GameUiDataBase.cs" />
     <Compile Include="Assets\04 Script\08 CoreDataBase\Singleton.cs" />
-    <Compile Include="Assets\BulletController.cs" />
-    <Compile Include="Assets\EnemyAI.cs" />
-    <Compile Include="Assets\EnemyHpUI.cs" />
-    <Compile Include="Assets\EnemyMove.cs" />
-    <Compile Include="Assets\EnemySummon.cs" />
-    <Compile Include="Assets\Movement.cs" />
-    <Compile Include="Assets\ObjectInfo.cs" />
-    <Compile Include="Assets\RotationBox.cs" />
-    <Compile Include="Assets\RotationBoxSummon.cs" />
-    <Compile Include="Assets\TowerAttack.cs" />
-    <Compile Include="Assets\UI_animaiton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\CharacteristicList.xml" />
     <None Include="Assets\Resources\CharacteristicPointList.xml" />
-    <None Include="Assets\Resources\LobbyTopUIList.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Resources\LobbyTopUIList.xml" />
     <None Include="Assets\Resources\MapList.xml" />
     <None Include="Assets\Resources\MapSettingTutorial.xml" />
     <None Include="Assets\Resources\MenualList_InherentNumber.xml" />
     <None Include="Assets\Resources\MonsterList.xml" />
-    <None Include="Assets\Resources\MonsterListUnLockList.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Resources\MonsterListUnLockList.xml" />
     <None Include="Assets\Resources\MonsterSummonList.xml" />
     <None Include="Assets\Resources\TendencyList.xml" />
   </ItemGroup>
