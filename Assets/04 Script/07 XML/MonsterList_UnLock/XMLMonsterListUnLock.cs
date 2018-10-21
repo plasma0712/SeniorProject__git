@@ -52,7 +52,7 @@ public class XMLMonsterListUnLock : Singleton<XMLMonsterListUnLock>
         XmlNode node = Document.DocumentElement;
         XmlElement childNode = Document.CreateElement("MonsterListUnLock");
 
-        childNode.SetAttribute("InherentNumbe", InherentNumber);
+        childNode.SetAttribute("InherentNumber", InherentNumber);
         childNode.SetAttribute("UnLock", UnLock);
 
         MonsterListUnLockListElement.AppendChild(childNode);

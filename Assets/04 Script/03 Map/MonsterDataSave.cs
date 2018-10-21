@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class MonsterDataSave :Singleton<MonsterDataSave>
 {
+    #region 리스트관리
     [SerializeField]
     Image iMonsterImage;
 
@@ -36,7 +37,7 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
     public float fNumber;
     public float fGold;
     public float fSoul;
-
+    //////////////////////////////////////////////////////////////
 
     public void Init(XMLMonsterData _cMonsterData)
     {
@@ -54,7 +55,35 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
         fNumber = cMonsterData.fNumber;
         fGold = cMonsterData.fGold;
         fSoul = cMonsterData.fSoul;
+
+        // 씨발 이거 고쳐야함 ㅋㅋㅋㅋㅋㅋ
+        if(fNumber==0)
+        {
+            Lock.gameObject.SetActive(false);
+        }
+        //
     }
+    #endregion
+
+    #region 잠금해제
+    public GameObject Lock;
+    XMLMonsterListUnLockData Current;
+    public int cInherentNumber;
+    public int cUnLock;
+
+    public void UnLock(int _cMonsterListUnLockData )
+    {
+        Current = XMLMonsterListUnLock.Instance.GetMonsterListUnLockData(_cMonsterListUnLockData);
+        cInherentNumber = Current.InherentNumber;
+        cUnLock = Current.UnLock;
+        //if(fNumber == cInherentNumber)
+        //{
+        //    Lock.gameObject.SetActive(false);
+        //    Debug.Log("가나다라");
+        //}         
+    }
+
+    #endregion
 
     public void SummonButtonClick()
     {

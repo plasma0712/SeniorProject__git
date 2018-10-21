@@ -14,7 +14,6 @@ public class MonsterSelectListManager : Singleton<MonsterSelectListManager>
     [SerializeField]
     RectTransform ContentRectTrans;
 
-    //List<XMLMonsterData> MonsterDatas;
 
     
     public void Init()
