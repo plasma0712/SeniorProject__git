@@ -12,7 +12,7 @@ public class Map : Singleton<Map>
     int TileArrY = 0;
 
     public const int MapXCount = 70;            // 최대 리미트 맵 10개라고 현재 기획상태
-    public const int MapYCount = 9;             // 맵 길이 
+    public const int MapYCount = 90;             // 맵 길이 
 
     [HideInInspector]
     public int TileXData = 0;
@@ -72,6 +72,7 @@ public class Map : Singleton<Map>
         XMLMap.Instance.LoadXml();
         for (int k = 0; k < XMLMap.Instance.MapLength(); k++)
         {
+            Debug.Log("맵 사이즈" + k);
             CurrentMapData(k);
             //GameObject instance = (GameObject)Instantiate(TileInfo.Instance.TileType[(int)tileTypeData], vPos, Quaternion.identity);
             //instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
