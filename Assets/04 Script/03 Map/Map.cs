@@ -62,7 +62,6 @@ public class Map : Singleton<Map>
         instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
         MapTiles[TileXData, TileYData] = instance.GetComponent<TileInfo>();
 
-        //MapTiles[(int)TileXData, (int)TileYData].pos = new int[2] { TileXData, TileYData };
         TileList.Add(instance);                       // 인스턴트로 생성된 오브젝트를 리스트로 넣어 관리하기 위해 함.
     }
 
@@ -72,12 +71,7 @@ public class Map : Singleton<Map>
         XMLMap.Instance.LoadXml();
         for (int k = 0; k < XMLMap.Instance.MapLength(); k++)
         {
-            Debug.Log("맵 사이즈" + k);
             CurrentMapData(k);
-            //GameObject instance = (GameObject)Instantiate(TileInfo.Instance.TileType[(int)tileTypeData], vPos, Quaternion.identity);
-            //instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
-            //TileList.Add(instance);                       // 인스턴트로 생성된 오브젝트를 리스트로 넣어 관리하기 위해 함.
-            //MapArrangement(instance,k);
             MapCount++;                                   // MapCount를 이용하여 현재 깔린 타일의 수를 알기 위함
         }
     }

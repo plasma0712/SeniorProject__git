@@ -1491,7 +1491,7 @@ MonoBehaviour:
   MonsterList: {fileID: 1266784136}
   TemporatySave: {fileID: 622690849}
   DummyText: {fileID: 370113884}
-  TextTime: 0.2
+  TextTime: 0.1
   NextButton: {fileID: 6483302}
 --- !u!114 &999158821
 MonoBehaviour:
@@ -1644,6 +1644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb492090cc0690940bda2c0988042d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  pos: 0000000000000000
   TileType:
   - {fileID: 1895347836968978, guid: eb4a0d264b7da144389731ff3f5ea797, type: 2}
   - {fileID: 1141375964026072, guid: b308426e6078baa4e964e6882218a469, type: 2}
@@ -1654,8 +1656,8 @@ MonoBehaviour:
   - {fileID: 1855741644992502, guid: 5a1b299c583633444ac17e4381f06293, type: 2}
   - {fileID: 1213288040787074, guid: 027f1cafb9f7db141a917beee884d511, type: 2}
   - {fileID: 1568459371191046, guid: 16a98a0b363ee674489ae8625e0f0191, type: 2}
-  unit: {fileID: 0}
-  pos: 0000000000000000
+  - {fileID: 1697154735805770, guid: 75d5f8ba1d570fa49bf5b863cc66c6f5, type: 2}
+  - {fileID: 1588026658712616, guid: d606c44ac54065940a65bafe13fa69f7, type: 2}
 --- !u!114 &1211913842
 MonoBehaviour:
   m_ObjectHideFlags: 0

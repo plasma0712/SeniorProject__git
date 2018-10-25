@@ -36,31 +36,31 @@ public class RotationBoxSummon : MonoBehaviour
         vPos.y = TileY * TileYData;
         
         
-        if (TileTypeData==1)
-        {
-            GameObject instance = Instantiate(BoxRotation[0], vPos, Quaternion.identity);
-            instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
-        }
-        else if (TileTypeData ==2)
-        {
-            GameObject instance = Instantiate(BoxRotation[1], vPos, Quaternion.identity);
-            instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
-        }
-
-        else if(TileTypeData==3)
-        {
-            GameObject instance = Instantiate(BoxRotation[2], vPos, Quaternion.identity);
-            instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
-        }
-        else if(TileTypeData ==4)
-        {
-            GameObject instance = Instantiate(BoxRotation[3], vPos, Quaternion.identity);
-            instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
-        }
-        else
-        {
-            return;
-        }
+        //if (TileTypeData==1)
+        //{
+        //    GameObject instance = Instantiate(BoxRotation[0], vPos, Quaternion.identity);
+        //    instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
+        //}
+        //else if (TileTypeData ==2)
+        //{
+        //    GameObject instance = Instantiate(BoxRotation[1], vPos, Quaternion.identity);
+        //    instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
+        //}
+        //
+        //else if(TileTypeData==3)
+        //{
+        //    GameObject instance = Instantiate(BoxRotation[2], vPos, Quaternion.identity);
+        //    instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
+        //}
+        //else if(TileTypeData ==4)
+        //{
+        //    GameObject instance = Instantiate(BoxRotation[3], vPos, Quaternion.identity);
+        //    instance.transform.parent = Parent.transform; // 인스턴트로 생성된 오브젝트를 정리하기 위해서 이용함.
+        //}
+        //else
+        //{
+        //    return;
+        //}
     }
 
     void BoxPostion()

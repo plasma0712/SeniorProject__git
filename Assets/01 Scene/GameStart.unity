@@ -372,6 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb492090cc0690940bda2c0988042d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  pos: 0000000000000000
   TileType:
   - {fileID: 1895347836968978, guid: eb4a0d264b7da144389731ff3f5ea797, type: 2}
   - {fileID: 1141375964026072, guid: b308426e6078baa4e964e6882218a469, type: 2}
@@ -382,8 +384,8 @@ MonoBehaviour:
   - {fileID: 1855741644992502, guid: 5a1b299c583633444ac17e4381f06293, type: 2}
   - {fileID: 1213288040787074, guid: 027f1cafb9f7db141a917beee884d511, type: 2}
   - {fileID: 1568459371191046, guid: 16a98a0b363ee674489ae8625e0f0191, type: 2}
-  unit: {fileID: 0}
-  pos: 0000000000000000
+  - {fileID: 1697154735805770, guid: 75d5f8ba1d570fa49bf5b863cc66c6f5, type: 2}
+  - {fileID: 1588026658712616, guid: d606c44ac54065940a65bafe13fa69f7, type: 2}
 --- !u!114 &1211913842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,10 +408,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94aa34c6103346d4fafb68b887b21a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iCountData: 0
   InherentNumberData: 0
   MonsterPosXData: 0
   MonsterPosYData: 0
   vPos: {x: 0, y: 0, z: 0}
+  _iCount: 
+  MonsterList: []
+  MonsterLists: []
 --- !u!114 &1211913844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +514,7 @@ MonoBehaviour:
   FundGoldUse: 1
   FundSoulUse: 1
   iTileNumbering: 0
+  DoingSummon: 1
 --- !u!1 &1266784136
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +747,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950403851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.87, y: 1.86, z: -10}
+  m_LocalPosition: {x: 2.47, y: 3.16, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

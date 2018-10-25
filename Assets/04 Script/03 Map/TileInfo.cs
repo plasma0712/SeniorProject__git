@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TileInfo : Singleton<TileInfo>
 {
-    public GameObject[] TileType;
+    #region 사용하려나...
+    //public GameObject[] TileType;
 
     public Unit unit;
 
@@ -36,5 +37,8 @@ public class TileInfo : Singleton<TileInfo>
         }
     }
 
+    #endregion
+
+    public GameObject[] TileType;
 
 }
