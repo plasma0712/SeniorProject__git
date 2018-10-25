@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4822492821468242}
   - component: {fileID: 212738721234382154}
   - component: {fileID: 114498219254010390}
-  - component: {fileID: 61839283885194018}
+  - component: {fileID: 61261228848316564}
   m_Layer: 0
   m_Name: MapTile_Type_01
   m_TagString: MapTile
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1141375964026072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -765.3, y: 21.97, z: 0}
+  m_LocalPosition: {x: 3.2483883, y: 5.8352704, z: 0}
   m_LocalScale: {x: 0.4635147, y: 0.4635147, z: 0.4635147}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61839283885194018
+--- !u!61 &61261228848316564
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,7 +51,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -65,7 +65,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1.4000001, y: 1.4000001}
   m_EdgeRadius: 0
 --- !u!114 &114498219254010390
 MonoBehaviour:
