@@ -25,18 +25,32 @@ public class TutorialText : Singleton<TutorialText>
     public GameObject NextButton;
     //public GameObject SkipButton;
 
-    
+    #region 이미지 변경
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // 원래라면 캐릭터자체이름을 확인해서 이미지파일을 변경하도록 했어야하는데, 임의로 현재는 변경을 할 예정.
+    // 01. image는 이미지가 바뀔 gameobject
+    // 02. sprites는 이미지를 변경하기 위한 sprite 모음
+    public Image image;
+    public Sprite[] sprites;
+
+    void TutorialImageChange(int ImageNumber, int TextNumbering)
+    {
+        image.sprite = sprites[ImageNumber];
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    #endregion
+
 
     private void Update()
     {
         //CurrentTutorialText();
-        if(GoldSoulNumber==0&&TextNumber==2)
+        if (GoldSoulNumber == 0 && TextNumber == 2)
         {
-            LobbyTopUIData.Instance.GetGold(100);
-            LobbyTopUIData.Instance.GetSoul(100);
+            LobbyTopUIData.Instance.GetGold(10000);
+            LobbyTopUIData.Instance.GetSoul(10000);
             GoldSoulNumber++;
         }
-        if(SummonSuccess==1)
+        if (SummonSuccess == 1)
         {
             MonsterList.gameObject.SetActive(false);
             TutorialMenualText.gameObject.SetActive(true);
@@ -55,7 +69,7 @@ public class TutorialText : Singleton<TutorialText>
     {
         CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
         //
-        TutorialMenualText.text = CurrentText.MenualExplanationText;       
+        TutorialMenualText.text = CurrentText.MenualExplanationText;
     }
     #endregion
 
@@ -75,33 +89,34 @@ public class TutorialText : Singleton<TutorialText>
             TutorialMenualText.text = TutorialMenualText.text.ToString().Insert(TutorialMenualText.text.ToString().Length, TemporatySave.text[TextCount].ToString());
             yield return new WaitForSeconds(TextTime);
             TextCount++;
-            if(TemporatySave.text.ToString().Length<=TutorialMenualText.text.ToString().Length)
+            if (TemporatySave.text.ToString().Length <= TutorialMenualText.text.ToString().Length)
             {
                 //Debug.Log("여기 지나나?");
                 TextCount = 0; // 텍스트 카운트 리셋시켜줌
 
-                NextButton.gameObject.SetActive(true);
-                StopCoroutine("TutorialTextCoroutine");
+                NextButton.gameObject.SetActive(true);  // 대화스크립트가 끝나면 여기서 멈춰줌
+                StopCoroutine("TutorialTextCoroutine"); // 대화스크립트가 끝나면 여기서 멈춰줌
                 break;
             }
             // currentText의 길이값 보다 커지면 break 걸어야할듯?
         }
     }
-  
-   //
-   //public void TextSkip()
-   //{
-   //    StopCoroutine("TutorialTextCoroutine");
-   //    TutorialMenualText.text = TemporatySave.text;
-   //    NextButton.gameObject.SetActive(true);
-   //    SkipButton.gameObject.SetActive(false);
-   //}
-   //
+
+    //
+    //public void TextSkip()
+    //{
+    //    StopCoroutine("TutorialTextCoroutine");
+    //    TutorialMenualText.text = TemporatySave.text;
+    //    NextButton.gameObject.SetActive(true);
+    //    SkipButton.gameObject.SetActive(false);
+    //}
+    //
+
 
     public void NextText()
     {
-        TextNumber++;
-        if(TextNumber==7)
+        NextTextNumber();
+        if (TextNumber == 7)
         {
             SceneChange.Instance.MapSettingGameStartTutorial();
         }
@@ -113,20 +128,30 @@ public class TutorialText : Singleton<TutorialText>
         {
             StartCoroutine("TutorialTextCoroutine");
         }
-        if(TextNumber==5) // 맵에 타워 세울 때
+        if (TextNumber == 5) // 맵에 타워 세울 때
         {
             Lily.gameObject.SetActive(false);
             Culling.gameObject.SetActive(true);
             MonsterList.gameObject.SetActive(true);
             TutorialMenualText.gameObject.SetActive(false);
         }
-        if(TextNumber==6)
+        if (TextNumber == 6)
         {
             Lily.gameObject.SetActive(true);
         }
 
     }
-    public void BeforeText()
+
+
+
+
+    public void NextTextNumber()
+    {
+        TextNumber++;
+    }
+
+
+    public void BeforeTextNumber()
     {
         TextNumber--;
     }
