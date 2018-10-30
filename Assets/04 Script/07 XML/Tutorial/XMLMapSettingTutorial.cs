@@ -7,13 +7,24 @@ public class XMLMapSettingTutorial : Singleton<XMLMapSettingTutorial>
 {
     List<MapSettingTutorialText> MapSettingTutorials;
 
-    string filePath = "./Assets/Resources/MapSettingTutorial.xml";
+    string filePath;
+    //= "./Assets/Resources/MapSettingTutorial.xml";
+#if UNITY_ANDROAD
+    filePath = Application.persistentDataPath + "./Assets/StreamingAssets/MapSettingTutorial.xml";
+    
+#endif
+#if UNITY_STANDALONE_WIN
+    filePath = Application.dataPath + "./Assets/StreamingAssets/MapSettingTutorial.xml";
+#endif
+
 
     private void Awake()
     {
         // CreateXml();
         LoadXml();     // 로드를 통해서 XML정보를 받아온다.
     }
+
+
 
     public void LoadXml()                                                           // XML 저장된 것을 불러오는 함수이다. 
     {
