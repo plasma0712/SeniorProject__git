@@ -15,19 +15,19 @@
   <MapSettingTutorial InherentNumber="13" Characters ="릴리" MenualExplanationText="정신이 없으실테니 마왕님 일단 제가 이번엔 골드와 소울을 드릴께요." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="14" Characters ="릴리" MenualExplanationText="윗쪽 창에 보이시는 골드와 소울을 이용해서 던전 내부를 꾸밀 수가 있어요." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="15" Characters ="릴리" MenualExplanationText="일단 이것부터 만들어 보도록 할께요." TextFontSize ="50"/>
-  <MapSettingTutorial InherentNumber="16" Characters ="" MenualExplanationText="이 지점을 클릭해보세요." TextFontSize ="50"/>
+  <MapSettingTutorial InherentNumber="16" Characters =""     MenualExplanationText="이 지점을 클릭해보세요." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="17" Characters ="릴리" MenualExplanationText="잘하셨어요. 마왕님 일단 자세한 설명은 나중에 드릴테니 일단 던전으로 들어온 적들부터 처리해보죠." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="18" Characters ="릴리" MenualExplanationText="여기는 던전의 전투를 지켜보는 곳이에요. 그렇기 때문에 직접적으로 던전내부에 손을 댈 수는 없습니다." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="19" Characters ="릴리" MenualExplanationText="하지만 마왕님이 힘만 찾으신다면, 마왕님께서 간접적으로 던전에 설치된 타워를 도와줄 수는 있어요. " TextFontSize ="50"/>
-  <MapSettingTutorial InherentNumber="20" Characters ="" MenualExplanationText="하지만 이건 추후문제이니 조금 이따가 알려드릴께요." TextFontSize ="50"/>
+  <MapSettingTutorial InherentNumber="20" Characters =""     MenualExplanationText="하지만 이건 추후문제이니 조금 이따가 알려드릴께요." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="21" Characters ="릴리" MenualExplanationText="적들이 던전내부로 들어왔네요. 지금이야 마왕님이 각성하신지 얼마 되지 않았고 준비가 되지 않아 적들의 수를 알려드리진 못했지만 다음부터는 적들의 수를 알려드리니 매번 긴장안하셔도 됩니다." TextFontSize ="40"/>
   <MapSettingTutorial InherentNumber="22" Characters ="릴리" MenualExplanationText="그러면 마왕님 일단 적부터 물리치고 나머지 얘기를 해보아요." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="23" Characters ="릴리" MenualExplanationText="우와 마왕님 잘하셨어요. 그러면 저 앙큼한 침입자녀석들부터 처리할까요?" TextFontSize ="50"/>
-  <MapSettingTutorial InherentNumber="24" Characters ="???" MenualExplanationText="마왕을 각성을 보자마자 바로 왔는데… 이렇게나 빨리 강해질수는 없어요." TextFontSize ="50"/>
+  <MapSettingTutorial InherentNumber="24" Characters ="???"  MenualExplanationText="마왕을 각성을 보자마자 바로 왔는데… 이렇게나 빨리 강해질수는 없어요." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="25" Characters ="릴리" MenualExplanationText="감히 인간주제에 어느안전이라고!!!" TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="26" Characters ="엘리시아" MenualExplanationText="크로아 왕국의 성녀인 나 엘리시아! 죽는건 두렵지 않아요!!! 다만 당신을 막지 못해 다시 희생될 사람들에게 미안할뿐이에요." TextFontSize ="50"/>
-  <MapSettingTutorial InherentNumber="27" Characters ="릴리" MenualExplanationText="이…이게 마왕님 얼릉 이 자들을 던전의 먹이로 사용해야합니다." TextFontSize ="50"/>
-  <MapSettingTutorial InherentNumber="28" Characters ="" MenualExplanationText="원하시는 선택지를 선택해주세요." TextFontSize ="50"/>
+  <MapSettingTutorial InherentNumber="27" Characters ="릴리"  MenualExplanationText="이…이게 마왕님 얼릉 이 자들을 던전의 먹이로 사용해야합니다." TextFontSize ="50"/>
+  <MapSettingTutorial InherentNumber="28" Characters =" "      MenualExplanationText="원하시는 선택지를 선택해주세요." TextFontSize ="50"/>
   <MapSettingTutorial InherentNumber="29" Characters ="릴리" MenualExplanationText="릴리의 말대로 던전침입한 자들을 죽인다면 던전소환에 필요한 골드와 소울을 크게 획득할 수 있습니다. 단, 던전의 난이도가 큰폭으로 높아지고 악인지수가 증가합니다." TextFontSize ="44"/>
-  <MapSettingTutorial InherentNumber="30" Characters ="엘리시아" MenualExplanationText="마왕으로 각성하지 얼마 안된 키린은 인간의 마음이 아직 있습니다. 이들을 살려준다면 골드와 소울은 적게 얻어 앞으로의 던전이 어려워질 수 있지만, 선한지수는 증가하고 던전의 난이도는 적당하게 오를것입니다." TextFontSize ="40"/>
+  <MapSettingTutorial InherentNumber="30" Characters ="엘리시아" MenualExplanationText="마왕으로 각성하지 얼마 안된 키린은 마음만큼은 인간입니다. 이들을 살려준다면 골드와 소울은 적게 얻어 앞으로의 행보가 어려워질 수 있지만, 선행지수는 증가하고 던전의 난이도는 적당하게 오를것입니다." TextFontSize ="40"/>
 </MapSettingTutorialList>

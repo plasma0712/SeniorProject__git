@@ -7,16 +7,7 @@ public class XMLMapSettingTutorial : Singleton<XMLMapSettingTutorial>
 {
     List<MapSettingTutorialText> MapSettingTutorials;
 
-    string filePath;
-    //= "./Assets/Resources/MapSettingTutorial.xml";
-#if UNITY_ANDROAD
-    filePath = Application.persistentDataPath + "./Assets/StreamingAssets/MapSettingTutorial.xml";
-    
-#endif
-#if UNITY_STANDALONE_WIN
-    filePath = Application.dataPath + "./Assets/StreamingAssets/MapSettingTutorial.xml";
-#endif
-
+    string filePath = "./Assets/Resources/MapSettingTutorial.xml";
 
     private void Awake()
     {
