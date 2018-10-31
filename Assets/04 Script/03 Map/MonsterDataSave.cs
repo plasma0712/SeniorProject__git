@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MonsterDataSave :Singleton<MonsterDataSave>
+public class MonsterDataSave : Singleton<MonsterDataSave>
 {
     #region 리스트관리
     [SerializeField]
@@ -57,7 +57,7 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
         fSoul = cMonsterData.fSoul;
 
         // 씨발 이거 고쳐야함 ㅋㅋㅋㅋㅋㅋ
-        if(fNumber==0)
+        if (fNumber == 0)
         {
             Lock.gameObject.SetActive(false);
         }
@@ -71,7 +71,7 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
     public int cInherentNumber;
     public int cUnLock;
 
-    public void UnLock(int _cMonsterListUnLockData )
+    public void UnLock(int _cMonsterListUnLockData)
     {
         Current = XMLMonsterListUnLock.Instance.GetMonsterListUnLockData(_cMonsterListUnLockData);
         cInherentNumber = Current.InherentNumber;
@@ -85,11 +85,12 @@ public class MonsterDataSave :Singleton<MonsterDataSave>
 
     #endregion
 
+
     public void SummonButtonClick()
     {
-        MonsterSummon.Instance.Summon((int)fNumber,(int)fGold,(int)fSoul);        
+        MonsterSummon.Instance.Summon((int)fNumber, (int)fGold, (int)fSoul);
     }
 
-    
-    
+
+
 }

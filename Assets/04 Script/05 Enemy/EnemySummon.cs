@@ -15,7 +15,7 @@ public class EnemySummon : Singleton<EnemySummon>
     public GameObject MonsterObject;
     private void Start()
     {
-        StartCoroutine("EnemeySummon");
+        //StartCoroutine("EnemeySummon");
     }
 
     IEnumerator EnemeySummon()
