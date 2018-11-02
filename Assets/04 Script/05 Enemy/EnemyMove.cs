@@ -17,6 +17,8 @@ public class EnemyMove : Singleton<EnemyMove>
     // Start 부분에서 몬스터 List 받아오기 필요없으면 /// 부분 통째로 삭제하면됨
     public EnemySummon StartObject;
     /////////////////////////////////////////////////////////
+    public GameObject TutorialSpot;
+
 
     private void Start()
     {
@@ -46,25 +48,29 @@ public class EnemyMove : Singleton<EnemyMove>
     private void OnTriggerEnter(Collider other)
     {
         #region 회전 충돌
-        if (other.transform.tag == "LeftRotation")
+        if (other.transform.tag == "Right")
         {
-            //Debug.Log("왼쪽");
-            this.gameObject.transform.Rotate(0, 0, 90);
+            MovePoint = Vector3.right;
         }
-        else if (other.transform.tag == "RightRotation")
+        else if (other.transform.tag == "Up")
         {
-            //Debug.Log("오른쪽");
-            this.gameObject.transform.Rotate(0, 0, -90);
+            MovePoint = Vector3.up;
         }
-        else if (other.transform.tag == "Exit")
+        else if (other.transform.tag == "RightDown")
         {
-            //Debug.Log("끝남");
-            Destroy(this.gameObject);
-            //BulletController.Instance.TargetFinalDestory = true;
+            int Num = Random.Range(0, 1);
+            if (Num == 0)
+            {
+                MovePoint = Vector3.right;
+            }
+            else
+            {
+                MovePoint = Vector3.down;
+            }
         }
-        else if (other.gameObject.GetComponent<TowerAttack>())
+        else if (other.transform.tag == "Down")
         {
-            //TowerAttack.Instance.ObjectInRangeList.Add(this.gameObject.GetComponent<EnemyMove>());
+            MovePoint = Vector3.down;
         }
         else
         {
@@ -99,4 +105,13 @@ public class EnemyMove : Singleton<EnemyMove>
         Debug.Log("2D트리거");
     }
 
+
+    public void TutorialMoveSpeedZero()
+    {
+        Speed = 0;
+    }
+    public void TutorialMoveSpeed()
+    {
+        Speed = 1;
+    }
 }

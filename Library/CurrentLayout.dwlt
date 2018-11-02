@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 12}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -36,10 +36,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 843
+<<<<<<< HEAD
+    x: 878
     y: 0
-    width: 440
-    height: 789
+    width: 405
+    height: 721
+=======
+    x: 753
+    y: 0
+    width: 438
+    height: 798
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
@@ -65,12 +72,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1283
-    height: 789
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+    height: 721
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 51
+  controlID: 36
+=======
+    width: 1191
+    height: 798
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 160
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -90,10 +106,17 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 911, y: 492}
-  m_MaxSize: {x: 22006, y: 14042}
+<<<<<<< HEAD
+  m_MinSize: {x: 915, y: 471}
+  m_MaxSize: {x: 22010, y: 14021}
   vertical: 1
-  controlID: 179
+  controlID: 107
+=======
+  m_MinSize: {x: 917, y: 492}
+  m_MaxSize: {x: 22012, y: 14042}
+  vertical: 1
+  controlID: 143
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -110,10 +133,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 359
+    width: 399
     height: 456
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -135,14 +158,18 @@ MonoBehaviour:
   - {fileID: 9}
   m_Position:
     serializedVersion: 2
-    x: 1283
+    x: 1191
     y: 0
-    width: 359
+    width: 399
     height: 987
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 109
+<<<<<<< HEAD
+  controlID: 11
+=======
+  controlID: 183
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,11 +185,19 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 789
+<<<<<<< HEAD
+    y: 721
     width: 1283
-    height: 198
+    height: 266
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    y: 798
+    width: 1191
+    height: 189
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -186,12 +221,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1283
+    width: 1191
     height: 987
-  m_MinSize: {x: 402, y: 321}
-  m_MaxSize: {x: 8002, y: 8021}
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 50
+<<<<<<< HEAD
+  controlID: 35
+=======
+  controlID: 159
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,7 +247,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 456
-    width: 359
+    width: 399
     height: 531
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
@@ -238,10 +277,17 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 987
-  m_MinSize: {x: 911, y: 492}
-  m_MaxSize: {x: 22006, y: 14042}
+<<<<<<< HEAD
+  m_MinSize: {x: 915, y: 471}
+  m_MaxSize: {x: 22010, y: 14021}
   vertical: 0
-  controlID: 180
+  controlID: 108
+=======
+  m_MinSize: {x: 917, y: 492}
+  m_MaxSize: {x: 22012, y: 14042}
+  vertical: 0
+  controlID: 144
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -256,9 +302,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1642
+    x: 1590
     y: 0
-    width: 278
+    width: 330
     height: 987
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -347,10 +393,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 843
-    height: 789
+<<<<<<< HEAD
+    width: 878
+    height: 721
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+=======
+    width: 753
+    height: 798
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -378,9 +431,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1285
+    x: 1193
     y: 548
-    width: 355
+    width: 395
     height: 510
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -395,19 +448,26 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/02 Resources
+    - Assets/06 Animations
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/02 Resources
+  - Assets/06 Animations
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Plasma\Desktop\SeniorProject__git
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 20370000
-    m_LastClickedID: 14112
-    m_ExpandedIDs: 00000000f22700008c2f000002340000123400008a3600002037000076370000463b000000ca9a3bffffff7f
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 231}
+    m_SelectedIDs: 663c0000
+    m_LastClickedID: 15462
+    m_ExpandedIDs: 0000000054280000f02f00009e3200006834000078340000d4360000f0360000ba370000dc370000ac3b0000663c000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 7}
+    m_SelectedIDs: 444c0000
+    m_LastClickedID: 19524
+    m_ExpandedIDs: 00000000543f00003c480000a2490000ac490000d24b00007c4c0000a24f000000ca9a3bffffff7f
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -435,7 +495,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f22700003a32000002340000123400008a3600002037000076370000463b0000
+<<<<<<< HEAD
+    m_ExpandedIDs: 0000000054280000f02f00006834000078340000f036000086370000dc370000ac3b0000
+=======
+    m_ExpandedIDs: 00000000543f00003c480000a2490000d24b00007c4c0000a24f0000
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -462,22 +526,35 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300007030000026290000bccaffff2c290000c0270000182900009c2d00003c36000030330000b2280000a82d0000bc280000aa2a0000d641fbffbe2d00001a2d00006e310000f4310000ac2f0000c0280000c02a0000c03300005059feff04060000d6370000fa280000fe2800006c350000383000008637000006290000d62b0000fc280000cc2b0000464900004a490000da2b00000a290000e42b0000062c00003e360000c63600000000000004290000f42b000064380000d0360000de2a00000a2c0000be3d0000a0650000a83b0000524100005859000036400000c03a0000484000007a41000098290000302f0000f02900001e3a000032280000
+<<<<<<< HEAD
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300007030000026290000bccaffff2c290000c0270000182900009c2d00003c36000030330000b2280000a82d0000bc280000aa2a0000d641fbffbe2d00001a2d00006e310000f4310000ac2f0000c0280000c02a0000c03300005059feff04060000d6370000fa280000fe2800006c350000383000008637000006290000d62b0000fc280000cc2b0000464900004a490000da2b00000a290000e42b0000062c00003e360000c636000004290000f42b000064380000d0360000de2a00000a2c0000be3d0000a0650000a83b0000524100005859000036400000c03a0000484000007a41000098290000302f0000f02900001e3a000032280000903a00009c340000a82f0000683d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Tutorial
-      m_OriginalName: Tutorial
+      m_Name: MonsterList
+      m_OriginalName: MonsterList
+=======
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300007030000026290000bccaffff2c290000c0270000182900009c2d00003c36000030330000b2280000a82d0000bc280000aa2a0000d641fbffbe2d00001a2d00006e310000f4310000ac2f0000c0280000c02a0000c03300005059feff04060000d6370000fa280000fe2800006c350000383000008637000006290000d62b0000fc280000cc2b0000464900004a490000da2b00000a290000e42b0000062c00003e360000c63600000000000004290000f42b000064380000d0360000de2a00000a2c0000be3d0000a0650000a83b00005241000058590000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11256
+<<<<<<< HEAD
+      m_UserData: 15668
+=======
+      m_UserData: 0
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
@@ -489,7 +566,11 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
-  m_DirectoriesAreaWidth: 155
+<<<<<<< HEAD
+  m_DirectoriesAreaWidth: 154
+=======
+  m_DirectoriesAreaWidth: 211
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -512,9 +593,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1644
+    x: 1592
     y: 92
-    width: 276
+    width: 328
     height: 966
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
@@ -546,27 +627,39 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1285
+    x: 1193
     y: 92
-    width: 355
+    width: 395
     height: 435
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 262a0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 7ce0f9ff5aeff9ffb214faffb414faff2e5efbff6a83fbffbc83fbff4284fbffde94fbff04d7fbffdcd7fbff424efcffa44efcff7c4ffcff7453fcff365afcff5c64fcff0eb4fcff10b4fcff14b4fcff80c3fcffd8e8fcffe0ecfcff0cf4fcfffafefcff64a6fdff78a6fdff7aa6fdff98b0fdff4cc8fdfffc01feffe4f8feff44fcfeff1e19ffff3a32ffff925effffdaeeffff9efbfffff4ffffff000000001c3f00003c3f00008c3f0000c24c0000e24c0000344d0000a2500000ac500000c25000001451000068510000fe56000014570000505700005a5d0000ba600000126100001a610000246100003a6100006e610000826100008c610000e8610000526200009c620000b0620000946700003c6b00009c6b0000b86b0000166c0000526d0000b26d0000ce6d0000186e00002c6e0000e2710000427200005e720000a8720000bc7200001e740000607400008a740000dc74000028760000
+<<<<<<< HEAD
+    m_ExpandedIDs: 9e59f7ffa45af7ff285cf7ff2c5cf7ff325cf7ffa45cf7ffa45df7ffac5df7ffa21af8ff1e50f8ffb869f8ff1c7bf8ffb090f8ff62b1f8ff7c08f9ffe873f9ff7ef2f9ff481bfaff062cfaff70b1fafff8ebfaff8a08fbffe40dfbff268dfbff428dfbff9eaffbff9eb3fbffb22bfcff1c54fcffc056fcff8061fcff206bfcfff296fcff46b2fcff46b6fcfff4dcfcff6af9fcff6afdfcff283ffdff2cc6fdffd0f4fdfff602feffec21feff2e2ffeff66cffeff44d3feffded6feff4285ffffe89effff22aeffff64ccffffbceaffffe2f6ffff7afbfffff4ffffff0000000008430000124300002843000078430000704500008a450000124800003248000082480000c64e0000ea53000030550000725500007c55000092550000e2550000266b0000466b0000966b00008c6d0000ac6d000016740000c8770000e877000020950000809b0000069d0000269d0000769d0000aaa00000f2a0000012a1000062a10000b4a1000044a3000064a30000b4a30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: MonsterSelect
-      m_OriginalName: MonsterSelect
+      m_Name: Intor_Scene
+      m_OriginalName: Intor_Scene
+=======
+    m_ExpandedIDs: fe55ffff5e59ffffc69bffffaca9ffff00000000385600004e5600006e560000ae560000be560000ea560000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: CharNameBackGround
+      m_OriginalName: CharNameBackGround
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 30322
+<<<<<<< HEAD
+      m_UserData: 46936
+=======
+      m_UserData: 22146
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -574,7 +667,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
-  - MapSettingTutorial
+  - Intro
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -602,18 +695,32 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 841
-    height: 768
+<<<<<<< HEAD
+    width: 876
+    height: 700
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 19073.455079925963
+  lastFramingTime: 90891.4076233791
+=======
+    width: 751
+    height: 777
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SceneLighting: 1
+  lastFramingTime: 2062.4762725688192
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1718.6201, y: 625.697, z: 0}
+<<<<<<< HEAD
+    m_Target: {x: -0.90477455, y: 0.6870792, z: 0.11697683}
     speed: 2
-    m_Value: {x: -1718.6201, y: 625.697, z: 0}
+    m_Value: {x: -0.90477455, y: 0.6870792, z: 0.11697683}
+=======
+    m_Target: {x: 476.63202, y: 188.2804, z: 7.6244545}
+    speed: 2
+    m_Value: {x: 476.63202, y: 188.2804, z: 7.6244545}
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -641,15 +748,25 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1825.4176
+<<<<<<< HEAD
+    m_Target: 10.298611
     speed: 2
-    m_Value: 1825.4176
+    m_Value: 10.298611
+=======
+    m_Target: 805.507
+    speed: 2
+    m_Value: 805.507
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0.12290812, y: -0.037798475, z: 0.0046847956, w: 0.9916869}
+<<<<<<< HEAD
+  m_LastSceneViewRotation: {x: -0.7098523, y: 0.004646957, z: -0.0046830103, w: -0.7043198}
+=======
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -677,10 +794,17 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 845
+<<<<<<< HEAD
+    x: 880
     y: 92
-    width: 436
-    height: 768
+    width: 401
+    height: 700
+=======
+    x: 755
+    y: 92
+    width: 434
+    height: 777
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -710,25 +834,44 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 436
-      height: 751
-    m_Scale: {x: 0.39114583, y: 0.39114583}
-    m_Translation: {x: 218, y: 375.5}
+<<<<<<< HEAD
+      width: 401
+      height: 683
+    m_Scale: {x: 0.35572916, y: 0.35572916}
+    m_Translation: {x: 200.5, y: 341.5}
+=======
+      width: 434
+      height: 760
+    m_Scale: {x: 0.39583334, y: 0.39583334}
+    m_Translation: {x: 217, y: 380}
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -557.3369
+<<<<<<< HEAD
+      x: -563.63104
       y: -960
-      width: 1114.6738
+      width: 1127.2621
       height: 1920
     m_MinimalGUI: 1
-  m_defaultScale: 0.39114583
+  m_defaultScale: 0.35572916
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 436, y: 768}
+  m_LastWindowPixelSize: {x: 401, y: 700}
+=======
+      x: -548.2105
+      y: -960
+      width: 1096.421
+      height: 1920
+    m_MinimalGUI: 1
+  m_defaultScale: 0.39583334
+  m_TargetTexture: {fileID: 0}
+  m_CurrentColorSpace: 0
+  m_LastWindowPixelSize: {x: 434, y: 777}
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -755,7 +898,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 881
+<<<<<<< HEAD
+    y: 813
     width: 1281
-    height: 177
+    height: 245
+=======
+    y: 890
+    width: 1189
+    height: 168
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
   m_PersistentViewDataDictionary: {fileID: 0}

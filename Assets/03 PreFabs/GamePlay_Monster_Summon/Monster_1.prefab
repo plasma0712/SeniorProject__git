@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1149390742646606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8375864, y: 4.9771867, z: 0}
+  m_LocalPosition: {x: -4.187771, y: 6.231459, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4335530998540492}
@@ -156,6 +156,7 @@ MonoBehaviour:
   firePos: {fileID: 4214899305408266}
   BC: {fileID: 0}
   aaa: 0
+  DelayBulletTime: 0.1
   ObjectInRangeList: []
 --- !u!114 &114903408299930302
 MonoBehaviour:
@@ -178,7 +179,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212047716968805856
 SpriteRenderer:

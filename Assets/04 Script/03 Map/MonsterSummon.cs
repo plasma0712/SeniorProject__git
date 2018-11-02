@@ -129,7 +129,8 @@ public class MonsterSummon : Singleton<MonsterSummon>
             {
                 bBuy = true;
                 Debug.Log(iNumber);
-                followingSummonMonster = Instantiate(BuyMonsterSummon[iNumber], new Vector3(0, 0, 0), Quaternion.identity);
+                followingSummonMonster
+                    = Instantiate(BuyMonsterSummon[iNumber], new Vector3(0, 0, 0), Quaternion.identity);
                 followingSummonMonster.GetComponent<BoxCollider2D>().enabled = false;
                 DoubleSummon = true;
                 Debug.Log("DoubleSummon : " + DoubleSummon);

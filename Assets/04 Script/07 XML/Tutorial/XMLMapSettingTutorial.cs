@@ -29,7 +29,6 @@ public class XMLMapSettingTutorial : Singleton<XMLMapSettingTutorial>
             MapSettingTutorialText MapSettingTutorial = new MapSettingTutorialText
             {
                 InherentNumber = System.Convert.ToInt32(MapSettingTutorialElement.GetAttribute("InherentNumber")),
-                EventNumber = System.Convert.ToInt32(MapSettingTutorialElement.GetAttribute("EventNumber")),
                 Characters = MapSettingTutorialElement.GetAttribute("Characters"),
                 MenualExplanationText = MapSettingTutorialElement.GetAttribute("MenualExplanationText"),
                 TextFontSize = System.Convert.ToInt32(MapSettingTutorialElement.GetAttribute("TextFontSize"))
@@ -66,7 +65,6 @@ public class XMLMapSettingTutorial : Singleton<XMLMapSettingTutorial>
 public class MapSettingTutorialText
 {
     public int InherentNumber;
-    public int EventNumber;
     public string Characters;
     public string MenualExplanationText;
     public int TextFontSize;

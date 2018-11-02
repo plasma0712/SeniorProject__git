@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177893f4dffebed479f2ad2618f7487d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 8
   BulletCore: {fileID: 1660975047140612}
   MonsterAttack_Range: {fileID: 0}
   Enemy: {fileID: 0}
-  damage: 5
+  damage: 10
   TargetLife: 0
   TargetFinalDestory: 0
 --- !u!135 &135353370853269348

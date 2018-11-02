@@ -10,9 +10,14 @@ public class TutorialText : Singleton<TutorialText>
     public int TextNumber;
     public int GoldSoulNumber;
     //public GameObject MenuText;
+    public Text TutorialMenualText;
 
+    public GameObject Lily;
     public GameObject Culling;
+    public GameObject MonsterList;
 
+    public Text TemporatySave;
+    public Text DummyText;
     MapSettingTutorialText CurrentText;
     int TextCount = 0; // 이것을 토대로 insert로 대입할 예정
 
@@ -20,9 +25,11 @@ public class TutorialText : Singleton<TutorialText>
     public GameObject NextButton;
     //public GameObject SkipButton;
 
-    #region 튜토리얼에서 사용하는 이미지 관리
+    #region 이미지 변경
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public GameObject Lily;
+<<<<<<< HEAD
+    public GameObject LilyLeft;
+    public GameObject LilyRight;
     public GameObject Ellisia;
     public GameObject Production01;
     public GameObject Production02;
@@ -34,25 +41,38 @@ public class TutorialText : Singleton<TutorialText>
     public Text CharactersName;
 
 
+=======
+    // 원래라면 캐릭터자체이름을 확인해서 이미지파일을 변경하도록 했어야하는데, 임의로 현재는 변경을 할 예정.
+    // 01. image는 이미지가 바뀔 gameobject
+    // 02. sprites는 이미지를 변경하기 위한 sprite 모음
+    public Image image;
+    public Sprite[] sprites;
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 
+    void TutorialImageChange(int ImageNumber, int TextNumbering)
+    {
+        image.sprite = sprites[ImageNumber];
+    }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     #endregion
 
 
     private void Update()
     {
-        ////CurrentTutorialText();
-        //if (GoldSoulNumber == 0 && TextNumber == 2)
-        //{
-        //    LobbyTopUIData.Instance.GetGold(10000);
-        //    LobbyTopUIData.Instance.GetSoul(10000);
-        //    GoldSoulNumber++;
-        //}
+        //CurrentTutorialText();
+        if (GoldSoulNumber == 0 && TextNumber == 2)
+        {
+            LobbyTopUIData.Instance.GetGold(10000);
+            LobbyTopUIData.Instance.GetSoul(10000);
+            GoldSoulNumber++;
+        }
         if (SummonSuccess == 1)
         {
-            NextTextNumber();//이거 삭제할지 안할지 확인요망
             MonsterList.gameObject.SetActive(false);
             TutorialMenualText.gameObject.SetActive(true);
+            SummonSuccess++;
+            //NextText();
+            //StartCoroutine("TutorialTextCoroutine");
         }
     }
 
@@ -63,6 +83,15 @@ public class TutorialText : Singleton<TutorialText>
         //SkipButton.gameObject.SetActive(true);
     }
 
+    #region 안씀
+    public void CurrentTutorialText()
+    {
+        CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
+        //
+        TutorialMenualText.text = CurrentText.MenualExplanationText;
+    }
+    #endregion
+
 
     IEnumerator TutorialTextCoroutine()
     {
@@ -71,19 +100,13 @@ public class TutorialText : Singleton<TutorialText>
         /// </summary>
         TutorialMenualText.text = DummyText.text;
         TemporatySave.text = DummyText.text;
-        if (TextNumber == 18) // 씬넘기기
-        {
-            SceneChange.Instance.MapSettingGameStartTutorial();
-        }
         CurrentText = XMLMapSettingTutorial.Instance.GetMapSettingTutorial(TextNumber);
-        EventProduct(CurrentText.EventNumber); // 이벤트씬 
-        CharactersName.text = CurrentText.Characters; // 현 대화창 이름
         TemporatySave.text = CurrentText.MenualExplanationText;
         yield return new WaitForSeconds(0.1f); // 일부러 지연시킴 TemporatySave가 빠르게 읽지를 못하는경우가 있어서
         while (true)
         {
             TutorialMenualText.text = TutorialMenualText.text.ToString().Insert(TutorialMenualText.text.ToString().Length, TemporatySave.text[TextCount].ToString());
-            yield return new WaitForSeconds(TextTime); // 텍스트 나오는 속도
+            yield return new WaitForSeconds(TextTime);
             TextCount++;
             if (TemporatySave.text.ToString().Length <= TutorialMenualText.text.ToString().Length)
             {
@@ -92,6 +115,11 @@ public class TutorialText : Singleton<TutorialText>
 
                 NextButton.gameObject.SetActive(true);  // 대화스크립트가 끝나면 여기서 멈춰줌
                 StopCoroutine("TutorialTextCoroutine"); // 대화스크립트가 끝나면 여기서 멈춰줌
+                Debug.Log("이벤트제어 변수 값 :  " + CurrentText.EventNumber);
+                if (CurrentText.EventNumber == 9)
+                {
+                    CharactersName.GetComponent<Text>().text = "릴리";
+                }
                 break;
             }
             // currentText의 길이값 보다 커지면 break 걸어야할듯?
@@ -111,116 +139,106 @@ public class TutorialText : Singleton<TutorialText>
 
     public void NextText()
     {
-        //if (TextNumber == 7)
-        //{
-        //    SceneChange.Instance.MapSettingGameStartTutorial();
-        //}
+<<<<<<< HEAD
         NextButton.gameObject.SetActive(false);
-        ////SkipButton.gameObject.SetActive(true);
-        //
-        ////Debug.Log("NextText에 진입 : " + TextNumber);
-        //if (TextNumber < 7)
-        //{
-        //    StartCoroutine("TutorialTextCoroutine");
-        //}
-        //if (TextNumber == 5) // 맵에 타워 세울 때
-        //{
-        //    Lily.gameObject.SetActive(false);
-        //    Culling.gameObject.SetActive(true);
-        //    MonsterList.gameObject.SetActive(true);
-        //    TutorialMenualText.gameObject.SetActive(false);
-        //}
-        //if (TextNumber == 6)
-        //{
-        //    Lily.gameObject.SetActive(true);
-        //}
-        if (TextNumber == 15)
+        if (TextNumber == 22)
         {
-            Lily.gameObject.SetActive(false);
-            MonsterList.gameObject.SetActive(true);
+            EventProduct(24);
+            NextTextNumber();
         }
         else
-            NextTextNumber();
-        StartCoroutine("TutorialTextCoroutine");
-
-    }
-
-    public void EventProduct(int _TextNumber)
-    {
-        if (_TextNumber == 0)
         {
+            if (TextNumber == 15)
+            {
+                LilyLeft.gameObject.SetActive(false);
+                MonsterList.gameObject.SetActive(true);
+                TutorialMenualText.gameObject.SetActive(false);
+            }
+            else
+                NextTextNumber();
+            StartCoroutine("TutorialTextCoroutine");
+        }
+    }
+=======
+        NextTextNumber();
+        if (TextNumber == 7)
+        {
+            SceneChange.Instance.MapSettingGameStartTutorial();
+        }
+        NextButton.gameObject.SetActive(false);
+        //SkipButton.gameObject.SetActive(true);
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
+
+        //Debug.Log("NextText에 진입 : " + TextNumber);
+        if (TextNumber < 7)
+        {
+<<<<<<< HEAD
             LobbyTopUIData.Instance.GetHeart(3);
             Production01.SetActive(true);
             Production02.SetActive(false);
-            Lily.SetActive(true);
+            LilyLeft.SetActive(true);
             Ellisia.SetActive(false);
+=======
+            StartCoroutine("TutorialTextCoroutine");
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
         }
-        else if (_TextNumber == 3)
+        if (TextNumber == 5) // 맵에 타워 세울 때
         {
-            Production01.SetActive(false);
-            Production02.SetActive(true);
-        }
-        else if (_TextNumber == 5)
-        {
-            Production02.SetActive(false);
-        }
-        else if (_TextNumber == 12)
-        {
-            //여기서 사운드 들릴예정
-        }
-        else if (_TextNumber == 13)
-        {
-            //맵창 띄움
-            Cave.gameObject.SetActive(false);
+            Lily.gameObject.SetActive(false);
             Culling.gameObject.SetActive(true);
+            MonsterList.gameObject.SetActive(true);
+            TutorialMenualText.gameObject.SetActive(false);
         }
-
-        else if (_TextNumber == 14)
+        if (TextNumber == 6)
         {
-            //이펙트 표시 상단 UI
-            LobbyTopUIData.Instance.GetGold(10000);
-            LobbyTopUIData.Instance.GetSoul(10000);
-        }
-        else if (_TextNumber == 16)
-        {
-            //릴리 없애줌
-        }
-        else if (_TextNumber == 17)
-        {
-            // 특정지역에 손가락애니메이션을 넣어 클릭하도록 유도
-            // 맵에 다른영역 선택안되게 하는 투명창 만들예정(LayCast설정을 통해 다른곳에 클릭조차 안됨)
-        }
-        else if (_TextNumber == 18)
-        {
+<<<<<<< HEAD
             //맵창그대로 둔상태로 릴리만 띄움
+            LilyLeft.gameObject.SetActive(true);
+=======
+            Lily.gameObject.SetActive(true);
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
         }
-        else if (_TextNumber == 19)
+
+<<<<<<< HEAD
+        }
+        else if (_TextNumber == 22)
         {
-            //현재 씬은 넘어간상황
+            LilyLeft.gameObject.SetActive(false);
+            LilyRight.gameObject.SetActive(true);
+            EnemySummon.Instance.StartCoroutine("TutorialEnemeySummon");//한마리 생산
+            EnemyMove.Instance.TutorialMoveSpeedZero();
+            EnemyMove.Instance.TutorialSpot.gameObject.SetActive(true);
+        }
+        else if (_TextNumber == 23)
+        {
+            LilyLeft.gameObject.SetActive(true);
+            LilyRight.gameObject.SetActive(false);
+            EnemyMove.Instance.TutorialSpot.gameObject.SetActive(false);
 
         }
-        else if (_TextNumber == 20)
+        else if (_TextNumber == 24) // 이거 제어 변수해줘야함
         {
-
-        }
-        else if (_TextNumber == 18)
-        {
-
-        }
-        else if (_TextNumber == 18)
-        {
-
+            TutorialMenualText.gameObject.SetActive(false);
+            EnemyMove.Instance.TutorialMoveSpeed();
+            EnemySummon.Instance.StartCoroutine("EnemySummons");
         }
         else
         {
             return;
         }
     }
+=======
+    }
+
+
+
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 
     public void NextTextNumber()
     {
         TextNumber++;
     }
+
 
     public void BeforeTextNumber()
     {

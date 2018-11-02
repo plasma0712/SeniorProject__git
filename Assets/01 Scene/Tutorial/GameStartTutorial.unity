@@ -432,6 +432,8 @@ MonoBehaviour:
   - {fileID: 1780954731762764, guid: f1affcd8c2f7402488b51537a286c4c0, type: 2}
   - {fileID: 1016676489817972, guid: 1fad5de349d644a449d43839991ece95, type: 2}
   - {fileID: 1799072149088630, guid: 704b0cd2d35e056489a3bb20f6f3dfc3, type: 2}
+  - {fileID: 1907688585344450, guid: f46d831dcfb4bee42a033ed18075a2c9, type: 2}
+  - {fileID: 1921351179431746, guid: 1aad079df9572a9478d452a183f3c5b6, type: 2}
   TileXData: 0
   TileYData: 0
   vPos: {x: 0, y: 0, z: 0}
@@ -531,7 +533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1266784137
 RectTransform:
   m_ObjectHideFlags: 0
@@ -713,7 +715,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -787,7 +789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1086, y: 847}
+  m_AnchoredPosition: {x: 333, y: 847}
   m_SizeDelta: {x: 276.6, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138293564

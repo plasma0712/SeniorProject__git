@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
     public BulletController BC;
     float time = 2;
     public bool aaa = false;
-
+    public float DelayBulletTime;
 
     #endregion
 
@@ -51,7 +51,8 @@ public class Tower : MonoBehaviour
                 }
             }
             CreateBullet();
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(DelayBulletTime);
+            aaa = false; //이게 핵심 이걸 해줘야 계속된 타워 공격진행
         }
     }
 

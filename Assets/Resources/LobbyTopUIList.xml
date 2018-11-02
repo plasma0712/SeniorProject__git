@@ -1,3 +1,7 @@
 <LobbyTopUIList>
-  <LobbyTopUI iGold="0" iSoul="0" iHeart="0" />
+<<<<<<< HEAD
+  <LobbyTopUI iGold="0" iSoul="0" iHeart="3" />
+=======
+  <LobbyTopUI iGold="10000" iSoul="10000" iHeart="0" />
+>>>>>>> parent of 2a32894... 튜토리얼 제작중 _ 이것저것 확인할 사항 많으니 확인 요망_
 </LobbyTopUIList>
