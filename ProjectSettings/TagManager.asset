@@ -6,13 +6,15 @@ TagManager:
   tags:
   - MapTile
   - Monster&Enemy
-  - LeftRotation
   - Enemy
   - Exit
-  - RightRotation
   - Tower
   - Range
   - Start
+  - Right
+  - Up
+  - RightDown
+  - Down
   layers:
   - Default
   - TransparentFX
